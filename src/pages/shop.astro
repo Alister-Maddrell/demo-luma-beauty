@@ -1,0 +1,128 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const products = [
+  { id: 'luma-radiance-serum', name: 'Radiance Renewal Serum', category: 'Skincare', price: 89, image: 'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=600&h=800&fit=crop&q=80', badge: 'New' },
+  { id: 'luma-cloud-cream', name: 'Cloud Silk Moisturiser', category: 'Skincare', price: 72, image: 'https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=600&h=800&fit=crop&q=80', badge: '' },
+  { id: 'luma-petal-cleanser', name: 'Petal Soft Cleanser', category: 'Skincare', price: 54, image: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=600&h=800&fit=crop&q=80', badge: '' },
+  { id: 'luma-soft-blush', name: 'Soft Focus Blush', category: 'Makeup', price: 46, image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&h=800&fit=crop&q=80', badge: 'Bestseller' },
+  { id: 'luma-body-oil', name: 'Golden Hour Body Oil', category: 'Body', price: 68, image: 'https://images.unsplash.com/photo-1619451334792-150fd785ee74?w=600&h=800&fit=crop&q=80', badge: '' },
+  { id: 'luma-lip-velvet', name: 'Lip Velvet', category: 'Makeup', price: 38, image: 'https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?w=600&h=800&fit=crop&q=80', badge: 'New' },
+  { id: 'luma-eye-elixir', name: 'Bright Eye Elixir', category: 'Skincare', price: 78, image: 'https://images.unsplash.com/photo-1556227702-d1e4e7b5c232?w=600&h=800&fit=crop&q=80', badge: '' },
+  { id: 'luma-mineral-spf', name: 'Mineral Veil SPF 50+', category: 'Skincare', price: 52, image: 'https://images.unsplash.com/photo-1590439471364-192aa70c0b53?w=600&h=800&fit=crop&q=80', badge: '' },
+  { id: 'luma-night-repair', name: 'Midnight Repair Serum', category: 'Skincare', price: 98, image: 'https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&h=800&fit=crop&q=80', badge: '' },
+  { id: 'luma-skin-tint', name: 'Skin Tint Foundation', category: 'Makeup', price: 56, image: 'https://images.unsplash.com/photo-1583209814683-c023dd293cc6?w=600&h=800&fit=crop&q=80', badge: '' },
+  { id: 'luma-body-souffle', name: 'Cashmere Body Soufflé', category: 'Body', price: 62, image: 'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=600&h=800&fit=crop&q=80', badge: 'Bestseller' },
+  { id: 'luma-ritual-set', name: 'The Ritual Set', category: 'Sets', price: 145, origPrice: 215, image: 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&h=800&fit=crop&q=80', badge: 'New' },
+];
+
+const filters = [
+  { title: 'Category', options: ['All Products', 'Skincare', 'Makeup', 'Body', 'Gift Sets'] },
+  { title: 'Skin Type', options: ['Normal', 'Dry', 'Oily', 'Combination', 'Sensitive'] },
+  { title: 'Concern', options: ['Hydration', 'Brightening', 'Anti-Ageing', 'Acne', 'Pigmentation'] },
+  { title: 'Price', options: ['Under $50', '$50 – $80', '$80 – $120', 'Over $120'] },
+];
+---
+
+<Layout title="Shop All — LUMA" description="Browse the complete LUMA collection of luxury skincare, makeup, and body care.">
+  <!-- BANNER -->
+  <section class="pt-[72px]">
+    <div class="bg-luma-cream py-16 lg:py-20 text-center">
+      <div class="max-w-[1400px] mx-auto px-6">
+        <h1 class="font-display text-[clamp(2rem,4vw,3.25rem)] font-medium animate-fade-up">Shop All</h1>
+        <div class="flex items-center justify-center gap-2 mt-3 text-xs text-luma-warm animate-fade-up delay-100">
+          <a href="/" class="hover:text-luma-black transition-colors">Home</a>
+          <span>/</span>
+          <span>Shop All</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOP -->
+  <section class="py-16 lg:py-20">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+      <div class="grid lg:grid-cols-[240px_1fr] gap-12">
+        <!-- Filters -->
+        <aside class="hidden lg:block">
+          <div class="sticky top-[100px]">
+            {filters.map(filter => (
+              <div class="mb-8 pb-8 border-b border-luma-cream">
+                <h3 class="text-[0.65rem] font-bold tracking-[0.18em] uppercase mb-4">{filter.title}</h3>
+                <div class="flex flex-col gap-2.5">
+                  {filter.options.map(opt => (
+                    <label class="flex items-center gap-3 cursor-pointer text-[0.8rem] text-luma-stone hover:text-luma-black transition-colors group">
+                      <span class="w-[15px] h-[15px] border border-luma-sand/80 group-hover:border-luma-charcoal transition-all duration-200 flex-shrink-0 flex items-center justify-center rounded-[2px]">
+                      </span>
+                      {opt}
+                    </label>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </aside>
+
+        <!-- Products -->
+        <div>
+          <div class="flex items-center justify-between mb-8 pb-4 border-b border-luma-cream">
+            <p class="text-sm text-luma-warm">Showing {products.length} products</p>
+            <div class="flex items-center gap-2">
+              <label class="text-xs font-medium tracking-wider uppercase text-luma-warm" for="sort">Sort:</label>
+              <select id="sort" class="text-sm font-medium bg-transparent border border-luma-cream px-3 py-2 pr-8 appearance-none cursor-pointer" style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23111110' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E&quot;); background-repeat: no-repeat; background-position: right 8px center;">
+                <option>Featured</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+                <option>Newest</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-5 gap-y-10">
+            {products.map((product, i) => (
+              <div class="group" data-reveal style={`transition-delay: ${Math.min(i * 0.04, 0.4)}s`}>
+                <a href="/product" class="block relative aspect-[3/4] overflow-hidden bg-luma-cream mb-4 img-zoom">
+                  <img src={product.image} alt={product.name} class="w-full h-full object-cover" loading="lazy" />
+                  {product.badge && (
+                    <span class={`absolute top-3 left-3 px-3 py-1.5 text-[0.6rem] font-bold tracking-[0.14em] uppercase z-10 ${product.badge === 'New' ? 'bg-luma-black text-white' : 'bg-white text-luma-black'}`}>
+                      {product.badge}
+                    </span>
+                  )}
+                  <div class="absolute inset-x-0 bottom-0 p-4 bg-white/95 backdrop-blur-sm translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]">
+                    <button
+                      class="snipcart-add-item w-full py-3 bg-luma-black text-white text-[0.65rem] font-semibold tracking-[0.16em] uppercase hover:bg-luma-charcoal transition-colors"
+                      data-item-id={product.id}
+                      data-item-price={product.price}
+                      data-item-url="/shop"
+                      data-item-name={product.name}
+                      data-item-image={product.image}
+                      data-item-description={`${product.category} — ${product.name}`}
+                    >
+                      Add to Bag — ${product.price}
+                    </button>
+                  </div>
+                </a>
+                <div class="px-0.5">
+                  <p class="text-[0.6rem] font-semibold tracking-[0.18em] uppercase text-luma-warm mb-1">Luma {product.category}</p>
+                  <h3 class="font-display text-base lg:text-lg font-medium">
+                    <a href="/product" class="hover:text-luma-copper transition-colors">{product.name}</a>
+                  </h3>
+                  <div class="flex items-center gap-2 mt-1">
+                    <p class={`text-sm font-semibold ${product.origPrice ? 'text-luma-copper' : 'text-luma-charcoal'}`}>${product.price}.00</p>
+                    {product.origPrice && <s class="text-sm text-luma-warm">${product.origPrice}.00</s>}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div class="text-center mt-16" data-reveal>
+            <button class="inline-flex items-center justify-center px-10 py-4 border border-luma-black text-[0.7rem] font-semibold tracking-[0.16em] uppercase hover:bg-luma-black hover:text-white transition-all">
+              Load More Products
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

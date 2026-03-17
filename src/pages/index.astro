@@ -1,0 +1,188 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const products = [
+  { id: 'luma-radiance-serum', name: 'Radiance Renewal Serum', category: 'Skincare', price: 89, image: 'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=600&h=800&fit=crop&q=80', badge: 'New' },
+  { id: 'luma-cloud-cream', name: 'Cloud Silk Moisturiser', category: 'Skincare', price: 72, image: 'https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=600&h=800&fit=crop&q=80', badge: '' },
+  { id: 'luma-petal-cleanser', name: 'Petal Soft Cleanser', category: 'Skincare', price: 54, image: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=600&h=800&fit=crop&q=80', badge: '' },
+  { id: 'luma-soft-blush', name: 'Soft Focus Blush', category: 'Makeup', price: 46, image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&h=800&fit=crop&q=80', badge: 'Bestseller' },
+  { id: 'luma-body-oil', name: 'Golden Hour Body Oil', category: 'Body', price: 68, image: 'https://images.unsplash.com/photo-1619451334792-150fd785ee74?w=600&h=800&fit=crop&q=80', badge: '' },
+  { id: 'luma-lip-velvet', name: 'Lip Velvet', category: 'Makeup', price: 38, image: 'https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?w=600&h=800&fit=crop&q=80', badge: 'New' },
+];
+
+const categories = [
+  { name: 'Skincare', count: 24, image: 'https://images.unsplash.com/photo-1612817288484-6f916006741a?w=500&h=650&fit=crop&q=80' },
+  { name: 'Makeup', count: 18, image: 'https://images.unsplash.com/photo-1583209814683-c023dd293cc6?w=500&h=650&fit=crop&q=80' },
+  { name: 'Body', count: 12, image: 'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=500&h=650&fit=crop&q=80' },
+  { name: 'Gift Sets', count: 8, image: 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=500&h=650&fit=crop&q=80' },
+];
+---
+
+<Layout title="LUMA — Luxury Beauty & Skincare">
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-end lg:items-center pt-[72px] overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1800&h=1200&fit=crop&q=85&crop=faces"
+        alt="Woman with luminous skin"
+        class="w-full h-full object-cover"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-luma-white/90 via-luma-white/60 to-transparent lg:from-luma-white/85 lg:via-luma-white/40"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-luma-white/80 via-transparent to-transparent lg:hidden"></div>
+    </div>
+
+    <div class="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 w-full pb-20 lg:pb-0">
+      <div class="max-w-xl">
+        <p class="overline animate-fade-up mb-5">New Collection — Spring 2026</p>
+        <h1 class="font-display text-[clamp(3rem,7vw,5.5rem)] font-medium leading-[1.05] tracking-[-0.02em] text-luma-black animate-fade-up delay-100">
+          Redefine<br>Your Ritual
+        </h1>
+        <p class="text-base lg:text-lg text-luma-charcoal leading-relaxed mt-6 mb-10 max-w-md animate-fade-up delay-200">
+          Luxury skincare and beauty crafted with intention. Clean formulas, elevated experience, radiant results.
+        </p>
+        <div class="flex flex-wrap gap-4 animate-fade-up delay-300">
+          <a href="/shop" class="btn-shine inline-flex items-center justify-center px-10 py-4 bg-luma-black text-white text-[0.7rem] font-semibold tracking-[0.18em] uppercase hover:bg-luma-charcoal hover:-translate-y-0.5 hover:shadow-lg transition-all">
+            Shop Now
+          </a>
+          <a href="/about" class="inline-flex items-center gap-2 px-1 py-4 text-[0.7rem] font-semibold tracking-[0.14em] uppercase border-b border-luma-black hover:border-luma-copper hover:text-luma-copper transition-all">
+            Our Philosophy
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="bg-luma-black text-luma-sand py-3.5 overflow-hidden">
+    <div class="animate-marquee whitespace-nowrap flex gap-12 text-[0.65rem] font-semibold tracking-[0.25em] uppercase">
+      <span>Free shipping over $75</span><span class="text-luma-copper">✦</span>
+      <span>Clean & Cruelty-Free</span><span class="text-luma-copper">✦</span>
+      <span>30-Day Returns</span><span class="text-luma-copper">✦</span>
+      <span>Sustainable Packaging</span><span class="text-luma-copper">✦</span>
+      <span>Clinically Tested</span><span class="text-luma-copper">✦</span>
+      <span>Free shipping over $75</span><span class="text-luma-copper">✦</span>
+      <span>Clean & Cruelty-Free</span><span class="text-luma-copper">✦</span>
+      <span>30-Day Returns</span><span class="text-luma-copper">✦</span>
+      <span>Sustainable Packaging</span><span class="text-luma-copper">✦</span>
+      <span>Clinically Tested</span><span class="text-luma-copper">✦</span>
+    </div>
+  </div>
+
+  <!-- CATEGORIES -->
+  <section class="py-24 lg:py-32">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+      <div class="text-center mb-14" data-reveal>
+        <p class="overline mb-3">Curated For You</p>
+        <h2 class="font-display text-[clamp(2rem,4vw,3.25rem)] font-medium tracking-[-0.01em]">Shop by Category</h2>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+        {categories.map((cat, i) => (
+          <a href="/shop" class="group relative aspect-[3/4] overflow-hidden img-zoom" data-reveal style={`transition-delay: ${i * 0.08}s`}>
+            <img src={cat.image} alt={cat.name} class="w-full h-full object-cover" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent group-hover:from-black/60 transition-all duration-500"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-5 lg:p-7 z-10">
+              <h3 class="font-display text-white text-xl lg:text-2xl font-medium">{cat.name}</h3>
+              <p class="text-white/60 text-xs tracking-wider mt-1">{cat.count} Products</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="py-24 lg:py-32 bg-luma-ivory">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+      <div class="text-center mb-14" data-reveal>
+        <p class="overline mb-3">Just Arrived</p>
+        <h2 class="font-display text-[clamp(2rem,4vw,3.25rem)] font-medium tracking-[-0.01em]">Featured Products</h2>
+        <p class="text-luma-stone mt-3 max-w-lg mx-auto">Our newest formulations, designed for your most luminous skin yet.</p>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-10 lg:gap-x-8 lg:gap-y-14">
+        {products.map((product, i) => (
+          <div class="group" data-reveal style={`transition-delay: ${i * 0.06}s`}>
+            <a href="/product" class="block relative aspect-[3/4] overflow-hidden bg-luma-cream mb-4 img-zoom">
+              <img src={product.image} alt={product.name} class="w-full h-full object-cover" loading="lazy" />
+              {product.badge && (
+                <span class={`absolute top-3 left-3 px-3 py-1.5 text-[0.6rem] font-bold tracking-[0.14em] uppercase z-10 ${product.badge === 'New' ? 'bg-luma-black text-white' : 'bg-white text-luma-black'}`}>
+                  {product.badge}
+                </span>
+              )}
+              <div class="absolute inset-x-0 bottom-0 p-4 bg-white/95 backdrop-blur-sm translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]">
+                <button
+                  class="snipcart-add-item w-full py-3 bg-luma-black text-white text-[0.65rem] font-semibold tracking-[0.16em] uppercase hover:bg-luma-charcoal transition-colors"
+                  data-item-id={product.id}
+                  data-item-price={product.price}
+                  data-item-url="/shop"
+                  data-item-name={product.name}
+                  data-item-image={product.image}
+                  data-item-description={`${product.category} — ${product.name}`}
+                >
+                  Add to Bag — ${product.price}
+                </button>
+              </div>
+            </a>
+            <div class="px-0.5">
+              <p class="text-[0.6rem] font-semibold tracking-[0.18em] uppercase text-luma-warm mb-1">Luma {product.category}</p>
+              <h3 class="font-display text-lg font-medium">
+                <a href="/product" class="hover:text-luma-copper transition-colors">{product.name}</a>
+              </h3>
+              <p class="text-sm font-semibold text-luma-charcoal mt-1">${product.price}.00</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="text-center mt-14" data-reveal>
+        <a href="/shop" class="inline-flex items-center justify-center px-10 py-4 border border-luma-black text-[0.7rem] font-semibold tracking-[0.16em] uppercase hover:bg-luma-black hover:text-white transition-all">
+          View All Products
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND STORY -->
+  <section class="py-24 lg:py-0">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-0">
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-0 items-center">
+        <div class="aspect-[4/5] overflow-hidden img-zoom" data-reveal>
+          <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=900&h=1100&fit=crop&q=80" alt="Woman applying skincare" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="lg:px-20 xl:px-28" data-reveal>
+          <p class="overline mb-4">Our Philosophy</p>
+          <h2 class="font-display text-[clamp(2rem,4vw,3.25rem)] font-medium tracking-[-0.01em] leading-tight">Beauty With<br>Intention</h2>
+          <p class="text-luma-charcoal leading-relaxed mt-6 max-w-md">At Luma, we believe luxury is not excess — it's intention. Every formula is crafted to honour your skin with the purest ingredients, sustainably sourced and scientifically proven.</p>
+          <p class="text-luma-charcoal leading-relaxed mt-4 max-w-md">We create for the woman who values quality over quantity, who sees her skincare ritual as a moment of stillness in a world that never stops.</p>
+          <a href="/about" class="inline-flex items-center gap-2 mt-8 text-[0.7rem] font-semibold tracking-[0.14em] uppercase border-b border-luma-black pb-1 hover:border-luma-copper hover:text-luma-copper transition-all">
+            Read Our Story
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="py-28 lg:py-36 bg-luma-cream relative grain overflow-hidden">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-10 text-center relative z-10" data-reveal>
+      <blockquote class="font-display text-[clamp(1.5rem,3.5vw,2.75rem)] font-normal italic leading-snug max-w-3xl mx-auto text-luma-charcoal">
+        &ldquo;True beauty begins the moment you decide to honour yourself.&rdquo;
+      </blockquote>
+      <cite class="not-italic text-[0.65rem] font-semibold tracking-[0.2em] uppercase text-luma-warm mt-8 block">The Luma Philosophy</cite>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="py-24 lg:py-32">
+    <div class="max-w-xl mx-auto px-6 text-center" data-reveal>
+      <p class="overline mb-3">Stay Connected</p>
+      <h2 class="font-display text-[clamp(2rem,4vw,3.25rem)] font-medium tracking-[-0.01em]">Join the Luma World</h2>
+      <p class="text-luma-stone mt-3 mb-10">Be the first to discover new arrivals, exclusive offers, and beauty rituals curated just for you.</p>
+      <form class="flex border border-luma-sand/70 focus-within:border-luma-black transition-colors duration-300" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Thank you ✓'; this.querySelector('input').value='';">
+        <input type="email" placeholder="Enter your email address" required class="flex-1 px-5 py-4 text-sm bg-transparent outline-none placeholder:text-luma-warm/70" aria-label="Email address">
+        <button type="submit" class="btn-shine px-8 py-4 bg-luma-black text-white text-[0.65rem] font-semibold tracking-[0.18em] uppercase whitespace-nowrap hover:bg-luma-charcoal transition-colors">Subscribe</button>
+      </form>
+    </div>
+  </section>
+</Layout>

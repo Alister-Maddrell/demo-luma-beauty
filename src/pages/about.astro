@@ -1,0 +1,126 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Our Story — LUMA" description="Discover the philosophy behind LUMA — luxury beauty crafted with intention, sustainability, and respect for your skin.">
+  <!-- Hero -->
+  <section class="relative min-h-[60vh] flex items-center justify-center pt-[72px] overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=1800&h=1000&fit=crop&q=80"
+        alt="Beauty ingredients"
+        class="w-full h-full object-cover"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-luma-black/40"></div>
+    </div>
+    <div class="relative z-10 text-center px-6 py-20">
+      <p class="overline text-luma-copper-light mb-4 animate-fade-up">Our Story</p>
+      <h1 class="font-display text-[clamp(2.75rem,6vw,5rem)] font-medium text-white leading-[1.1] animate-fade-up delay-100">
+        Beauty With<br>Intention
+      </h1>
+      <p class="text-white/70 text-lg mt-6 max-w-lg mx-auto animate-fade-up delay-200">
+        We founded Luma with a simple belief: luxury beauty should be thoughtful, inclusive, and kind.
+      </p>
+    </div>
+  </section>
+
+  <!-- Origin Story -->
+  <section class="py-24 lg:py-32">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-0">
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-0 items-center">
+        <div class="aspect-[4/5] overflow-hidden img-zoom" data-reveal>
+          <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=900&h=1100&fit=crop&q=80" alt="Luma products" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="lg:px-20 xl:px-28" data-reveal>
+          <p class="overline mb-4">The Beginning</p>
+          <h2 class="font-display text-[clamp(2rem,4vw,3rem)] font-medium leading-tight">Born From<br>a Ritual</h2>
+          <p class="text-luma-charcoal leading-relaxed mt-6">
+            Luma began in a small Sydney studio in 2022, born from the belief that your skincare routine should be the most intentional part of your day.
+          </p>
+          <p class="text-luma-charcoal leading-relaxed mt-4">
+            Our founder, after years in luxury beauty, saw a gap — products that performed brilliantly but felt generic, and brands that looked beautiful but didn't deliver. We set out to marry cutting-edge science with the purest botanicals.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="py-24 lg:py-32 bg-luma-cream relative grain overflow-hidden">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-10 relative z-10">
+      <div class="text-center mb-16" data-reveal>
+        <p class="overline mb-3">What We Stand For</p>
+        <h2 class="font-display text-[clamp(2rem,4vw,3rem)] font-medium">Our Values</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-12 lg:gap-20">
+        <div class="text-center" data-reveal style="transition-delay: 0s">
+          <p class="font-display text-5xl font-light text-luma-copper mb-4">01</p>
+          <h3 class="font-display text-xl font-medium mb-3">Clean Science</h3>
+          <p class="text-sm text-luma-stone leading-relaxed">Every formula is backed by clinical research and free from parabens, sulphates, synthetic fragrances, and phthalates. Complete transparency in every ingredient.</p>
+        </div>
+        <div class="text-center" data-reveal style="transition-delay: 0.1s">
+          <p class="font-display text-5xl font-light text-luma-copper mb-4">02</p>
+          <h3 class="font-display text-xl font-medium mb-3">Sustainable Luxury</h3>
+          <p class="text-sm text-luma-stone leading-relaxed">100% recyclable or refillable packaging. Carbon-neutral shipping. Ethically sourced ingredients. Luxury doesn't have to cost the earth.</p>
+        </div>
+        <div class="text-center" data-reveal style="transition-delay: 0.2s">
+          <p class="font-display text-5xl font-light text-luma-copper mb-4">03</p>
+          <h3 class="font-display text-xl font-medium mb-3">Inclusive Beauty</h3>
+          <p class="text-sm text-luma-stone leading-relaxed">Beauty is for everyone. Extensive shade ranges, formulas tested on all skin types, and a brand that celebrates diversity in all its forms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ingredients -->
+  <section class="py-24 lg:py-32">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-0">
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-0 items-center">
+        <div class="lg:px-10 xl:px-20 order-2 lg:order-1" data-reveal>
+          <p class="overline mb-4">Our Ingredients</p>
+          <h2 class="font-display text-[clamp(2rem,4vw,3rem)] font-medium leading-tight">Only What Your<br>Skin Needs</h2>
+          <p class="text-luma-charcoal leading-relaxed mt-6">
+            We work with cosmetic chemists and dermatologists to develop formulas that are effective at the lowest possible concentration. No filler ingredients, no marketing gimmicks.
+          </p>
+          <p class="text-luma-charcoal leading-relaxed mt-4">
+            Hero ingredients include stabilised Vitamin C, bakuchiol, Australian kakadu plum, and ethically sourced rose hip from the Adelaide Hills.
+          </p>
+          <a href="/shop" class="inline-flex items-center gap-2 mt-8 text-[0.7rem] font-semibold tracking-[0.14em] uppercase border-b border-luma-black pb-1 hover:border-luma-copper hover:text-luma-copper transition-all">
+            Explore Our Range
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="aspect-[4/5] overflow-hidden img-zoom order-1 lg:order-2" data-reveal>
+          <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=900&h=1100&fit=crop&q=80" alt="Natural skincare ingredients" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <section class="py-28 lg:py-36 bg-luma-ivory">
+    <div class="max-w-3xl mx-auto px-6 text-center" data-reveal>
+      <blockquote class="font-display text-[clamp(1.5rem,3.5vw,2.75rem)] font-normal italic leading-snug text-luma-charcoal">
+        &ldquo;We don't make products to fill a shelf. We make products worthy of your ritual.&rdquo;
+      </blockquote>
+      <cite class="not-italic text-[0.65rem] font-semibold tracking-[0.2em] uppercase text-luma-warm mt-8 block">Founder, Luma Beauty</cite>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-28 lg:py-36 bg-luma-black text-center">
+    <div class="max-w-2xl mx-auto px-6" data-reveal>
+      <p class="overline text-luma-copper-light mb-4">Begin Your Ritual</p>
+      <h2 class="font-display text-[clamp(2rem,4vw,3rem)] font-medium text-white leading-tight">
+        Ready to Discover<br>Your New Favourites?
+      </h2>
+      <p class="text-luma-warm mt-4 mb-10 max-w-md mx-auto">
+        Explore our curated collection of luxury skincare, makeup, and body care — crafted with intention.
+      </p>
+      <a href="/shop" class="btn-shine inline-flex items-center justify-center px-10 py-4 bg-luma-copper text-white text-[0.7rem] font-semibold tracking-[0.18em] uppercase hover:bg-luma-copper-light hover:-translate-y-0.5 hover:shadow-lg transition-all">
+        Shop the Collection
+      </a>
+    </div>
+  </section>
+</Layout>
