@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop All — LUMA</title>
+  <meta name="description" content="Browse the complete LUMA collection of luxury skincare, makeup, and body care.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" role="banner">
+    <div class="header__inner">
+      <div class="header__left">
+        <a href="index.html" class="header__logo" aria-label="LUMA Home">Luma</a>
+        <nav class="header__nav" role="navigation" aria-label="Main navigation">
+          <div class="header__nav-item">
+            <a href="shop.html" class="header__nav-link">Shop</a>
+          </div>
+          <div class="header__nav-item">
+            <a href="shop.html" class="header__nav-link">Skincare</a>
+          </div>
+          <div class="header__nav-item">
+            <a href="shop.html" class="header__nav-link">Makeup</a>
+          </div>
+          <div class="header__nav-item">
+            <a href="shop.html" class="header__nav-link">Bestsellers</a>
+          </div>
+          <div class="header__nav-item">
+            <a href="about.html" class="header__nav-link">Our Story</a>
+          </div>
+        </nav>
+      </div>
+      <div class="header__actions">
+        <button class="header__action-btn" aria-label="Search">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+        </button>
+        <button class="header__action-btn" aria-label="Account">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M5 20c0-4 3.5-7 7-7s7 3 7 7"/></svg>
+        </button>
+        <button class="header__action-btn snipcart-checkout" aria-label="Shopping bag">
+          <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="cart-count snipcart-items-count"></span>
+        </button>
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+    <a href="shop.html" class="mobile-nav__link">Shop All</a>
+    <a href="shop.html" class="mobile-nav__link">Skincare</a>
+    <a href="shop.html" class="mobile-nav__link">Makeup</a>
+    <a href="shop.html" class="mobile-nav__link">Body</a>
+    <a href="about.html" class="mobile-nav__link">Our Story</a>
+  </nav>
+
+  <!-- ===== PAGE BANNER ===== -->
+  <div class="page-banner">
+    <div class="container">
+      <h1 class="heading-lg">Shop All</h1>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb__sep">/</span>
+        <span>Shop All</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SHOP CONTENT ===== -->
+  <section class="section" aria-label="Product collection">
+    <div class="container">
+
+      <button class="filters__mobile-toggle" aria-label="Toggle filters">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/><circle cx="8" cy="6" r="2" fill="currentColor"/><circle cx="16" cy="12" r="2" fill="currentColor"/><circle cx="10" cy="18" r="2" fill="currentColor"/></svg>
+        Show Filters
+      </button>
+
+      <div class="shop-layout">
+        <!-- Sidebar -->
+        <aside class="filters__sidebar" aria-label="Product filters">
+          <div class="filters">
+            <div class="filters__section">
+              <div class="filters__title" role="button" tabindex="0" aria-expanded="true">
+                Category
+                <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+              </div>
+              <div class="filters__options">
+                <label class="filters__option"><span class="filters__checkbox"></span> All Products</label>
+                <label class="filters__option"><span class="filters__checkbox"></span> Skincare</label>
+                <label class="filters__option"><span class="filters__checkbox"></span> Makeup</label>
+                <label class="filters__option"><span class="filters__checkbox"></span> Body</label>
+                <label class="filters__option"><span class="filters__checkbox"></span> Gift Sets</label>
+              </div>
+            </div>
+            <div class="filters__section">
+              <div class="filters__title" role="button" tabindex="0" aria-expanded="true">
+                Skin Type
+                <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+              </div>
+              <div class="filters__options">
+                <label class="filters__option"><span class="filters__checkbox"></span> Normal</label>
+                <label class="filters__option"><span class="filters__checkbox"></span> Dry</label>
+                <label class="filters__option"><span class="filters__checkbox"></span> Oily</label>
+                <label class="filters__option"><span class="filters__checkbox"></span> Combination</label>
+                <label class="filters__option"><span class="filters__checkbox"></span> Sensitive</label>
+              </div>
+            </div>
+            <div class="filters__section">
+              <div class="filters__title" role="button" tabindex="0" aria-expanded="true">
+                Concern
+                <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+              </div>
+              <div class="filters__options">
+                <label class="filters__option"><span class="filters__checkbox"></span> Hydration</label>
+                <label class="filters__option"><span class="filters__checkbox"></span> Brightening</label>
+                <label class="filters__option"><span class="filters__checkbox"></span> Anti-Ageing</label>
+                <label class="filters__option"><span class="filters__checkbox"></span> Acne</label>
+                <label class="filters__option"><span class="filters__checkbox"></span> Pigmentation</label>
+              </div>
+            </div>
+            <div class="filters__section">
+              <div class="filters__title" role="button" tabindex="0" aria-expanded="true">
+                Price
+                <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+              </div>
+              <div class="filters__options">
+                <label class="filters__option"><span class="filters__checkbox"></span> Under $50</label>
+                <label class="filters__option"><span class="filters__checkbox"></span> $50 – $80</label>
+                <label class="filters__option"><span class="filters__checkbox"></span> $80 – $120</label>
+                <label class="filters__option"><span class="filters__checkbox"></span> Over $120</label>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Products -->
+        <div>
+          <div class="shop-toolbar">
+            <span class="shop-toolbar__count">Showing 12 of 62 products</span>
+            <div class="shop-toolbar__sort">
+              <label for="sort-select">Sort by:</label>
+              <select id="sort-select">
+                <option>Featured</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+                <option>Newest</option>
+                <option>Bestselling</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="products-grid products-grid--4col reveal-stagger">
+
+            <!-- Product 1 -->
+            <div class="product-card">
+              <div class="product-card__image-wrap">
+                <div class="product-card__placeholder product-card__placeholder--1">
+                  <svg class="product-card__placeholder-icon" viewBox="0 0 48 48" fill="none" stroke="#C4A882" stroke-width="1"><rect x="14" y="4" width="20" height="40" rx="10"/><line x1="24" y1="4" x2="24" y2="12"/></svg>
+                </div>
+                <span class="product-card__badge product-card__badge--new">New</span>
+                <div class="product-card__quick-add">
+                  <button class="btn btn--primary btn--full snipcart-add-item"
+                    data-item-id="luma-radiance-serum"
+                    data-item-price="89.00"
+                    data-item-url="/shop.html"
+                    data-item-name="Radiance Renewal Serum"
+                    data-item-image=""
+                    data-item-description="Vitamin C brightening serum with hyaluronic acid. 30ml.">
+                    Add to Bag — $89
+                  </button>
+                </div>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__brand">Luma Skincare</span>
+                <h3 class="product-card__name"><a href="product.html">Radiance Renewal Serum</a></h3>
+                <span class="product-card__price">$89.00</span>
+              </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+              <div class="product-card__image-wrap">
+                <div class="product-card__placeholder product-card__placeholder--2">
+                  <svg class="product-card__placeholder-icon" viewBox="0 0 48 48" fill="none" stroke="#C4A882" stroke-width="1"><circle cx="24" cy="28" r="16"/><path d="M18 12h12l2 8H16z"/></svg>
+                </div>
+                <div class="product-card__quick-add">
+                  <button class="btn btn--primary btn--full snipcart-add-item"
+                    data-item-id="luma-cloud-cream"
+                    data-item-price="72.00"
+                    data-item-url="/shop.html"
+                    data-item-name="Cloud Silk Moisturiser"
+                    data-item-image=""
+                    data-item-description="Ultra-hydrating whipped moisturiser with squalane. 50ml.">
+                    Add to Bag — $72
+                  </button>
+                </div>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__brand">Luma Skincare</span>
+                <h3 class="product-card__name"><a href="product.html">Cloud Silk Moisturiser</a></h3>
+                <span class="product-card__price">$72.00</span>
+              </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+              <div class="product-card__image-wrap">
+                <div class="product-card__placeholder product-card__placeholder--3">
+                  <svg class="product-card__placeholder-icon" viewBox="0 0 48 48" fill="none" stroke="#C4A882" stroke-width="1"><rect x="12" y="8" width="24" height="32" rx="4"/><line x1="12" y1="16" x2="36" y2="16"/></svg>
+                </div>
+                <div class="product-card__quick-add">
+                  <button class="btn btn--primary btn--full snipcart-add-item"
+                    data-item-id="luma-petal-cleanser"
+                    data-item-price="54.00"
+                    data-item-url="/shop.html"
+                    data-item-name="Petal Soft Cleanser"
+                    data-item-image=""
+                    data-item-description="Gentle milky cleanser with rose water and chamomile. 150ml.">
+                    Add to Bag — $54
+                  </button>
+                </div>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__brand">Luma Skincare</span>
+                <h3 class="product-card__name"><a href="product.html">Petal Soft Cleanser</a></h3>
+                <span class="product-card__price">$54.00</span>
+              </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+              <div class="product-card__image-wrap">
+                <div class="product-card__placeholder product-card__placeholder--4">
+                  <svg class="product-card__placeholder-icon" viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="1"><circle cx="24" cy="24" r="12"/><circle cx="24" cy="24" r="6"/></svg>
+                </div>
+                <span class="product-card__badge">Bestseller</span>
+                <div class="product-card__quick-add">
+                  <button class="btn btn--primary btn--full snipcart-add-item"
+                    data-item-id="luma-soft-focus-blush"
+                    data-item-price="46.00"
+                    data-item-url="/shop.html"
+                    data-item-name="Soft Focus Blush"
+                    data-item-image=""
+                    data-item-description="Buildable cream blush in Petal Pink.">
+                    Add to Bag — $46
+                  </button>
+                </div>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__brand">Luma Makeup</span>
+                <h3 class="product-card__name"><a href="product.html">Soft Focus Blush</a></h3>
+                <span class="product-card__price">$46.00</span>
+                <div class="swatches" style="margin-top: 0.5rem">
+                  <span class="swatch is-active" style="background:#EACED3"></span>
+                  <span class="swatch" style="background:#D4A0A8"></span>
+                  <span class="swatch" style="background:#C4886E"></span>
+                  <span class="swatch" style="background:#B06850"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+              <div class="product-card__image-wrap">
+                <div class="product-card__placeholder product-card__placeholder--5">
+                  <svg class="product-card__placeholder-icon" viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="1"><path d="M16 8h16v32c0 2-2 4-4 4H20c-2 0-4-2-4-4V8z"/><line x1="16" y1="16" x2="32" y2="16"/></svg>
+                </div>
+                <div class="product-card__quick-add">
+                  <button class="btn btn--primary btn--full snipcart-add-item"
+                    data-item-id="luma-golden-body-oil"
+                    data-item-price="68.00"
+                    data-item-url="/shop.html"
+                    data-item-name="Golden Hour Body Oil"
+                    data-item-image=""
+                    data-item-description="Luminous dry body oil with jojoba and vitamin E. 100ml.">
+                    Add to Bag — $68
+                  </button>
+                </div>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__brand">Luma Body</span>
+                <h3 class="product-card__name"><a href="product.html">Golden Hour Body Oil</a></h3>
+                <span class="product-card__price">$68.00</span>
+              </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card">
+              <div class="product-card__image-wrap">
+                <div class="product-card__placeholder product-card__placeholder--6">
+                  <svg class="product-card__placeholder-icon" viewBox="0 0 48 48" fill="none" stroke="#C4A882" stroke-width="1"><path d="M20 4h8l2 12H18z"/><rect x="14" y="16" width="20" height="28" rx="2"/></svg>
+                </div>
+                <span class="product-card__badge product-card__badge--new">New</span>
+                <div class="product-card__quick-add">
+                  <button class="btn btn--primary btn--full snipcart-add-item"
+                    data-item-id="luma-lip-velvet"
+                    data-item-price="38.00"
+                    data-item-url="/shop.html"
+                    data-item-name="Lip Velvet"
+                    data-item-image=""
+                    data-item-description="Matte lip colour with hydrating core. Shade: Bare.">
+                    Add to Bag — $38
+                  </button>
+                </div>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__brand">Luma Makeup</span>
+                <h3 class="product-card__name"><a href="product.html">Lip Velvet</a></h3>
+                <span class="product-card__price">$38.00</span>
+                <div class="swatches" style="margin-top: 0.5rem">
+                  <span class="swatch is-active" style="background:#C8918A"></span>
+                  <span class="swatch" style="background:#A0484A"></span>
+                  <span class="swatch" style="background:#8B3A3A"></span>
+                  <span class="swatch" style="background:#D4A090"></span>
+                  <span class="swatch" style="background:#6B2020"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card">
+              <div class="product-card__image-wrap">
+                <div class="product-card__placeholder product-card__placeholder--3">
+                  <svg class="product-card__placeholder-icon" viewBox="0 0 48 48" fill="none" stroke="#C4A882" stroke-width="1"><ellipse cx="24" cy="32" rx="14" ry="10"/><path d="M16 20c0-6 3.5-12 8-12s8 6 8 12"/></svg>
+                </div>
+                <div class="product-card__quick-add">
+                  <button class="btn btn--primary btn--full snipcart-add-item"
+                    data-item-id="luma-eye-elixir"
+                    data-item-price="78.00"
+                    data-item-url="/shop.html"
+                    data-item-name="Bright Eye Elixir"
+                    data-item-image=""
+                    data-item-description="Depuffing eye cream with caffeine and peptides. 15ml.">
+                    Add to Bag — $78
+                  </button>
+                </div>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__brand">Luma Skincare</span>
+                <h3 class="product-card__name"><a href="product.html">Bright Eye Elixir</a></h3>
+                <span class="product-card__price">$78.00</span>
+              </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product-card">
+              <div class="product-card__image-wrap">
+                <div class="product-card__placeholder product-card__placeholder--1">
+                  <svg class="product-card__placeholder-icon" viewBox="0 0 48 48" fill="none" stroke="#C4A882" stroke-width="1"><rect x="10" y="6" width="28" height="36" rx="6"/><circle cx="24" cy="24" r="8"/></svg>
+                </div>
+                <div class="product-card__quick-add">
+                  <button class="btn btn--primary btn--full snipcart-add-item"
+                    data-item-id="luma-mineral-spf"
+                    data-item-price="52.00"
+                    data-item-url="/shop.html"
+                    data-item-name="Mineral Veil SPF 50+"
+                    data-item-image=""
+                    data-item-description="Invisible mineral sunscreen. Lightweight, no white cast. 50ml.">
+                    Add to Bag — $52
+                  </button>
+                </div>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__brand">Luma Skincare</span>
+                <h3 class="product-card__name"><a href="product.html">Mineral Veil SPF 50+</a></h3>
+                <span class="product-card__price">$52.00</span>
+              </div>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="product-card">
+              <div class="product-card__image-wrap">
+                <div class="product-card__placeholder product-card__placeholder--2">
+                  <svg class="product-card__placeholder-icon" viewBox="0 0 48 48" fill="none" stroke="#C4A882" stroke-width="1"><rect x="14" y="4" width="20" height="40" rx="10"/><line x1="24" y1="4" x2="24" y2="12"/></svg>
+                </div>
+                <div class="product-card__quick-add">
+                  <button class="btn btn--primary btn--full snipcart-add-item"
+                    data-item-id="luma-night-repair"
+                    data-item-price="98.00"
+                    data-item-url="/shop.html"
+                    data-item-name="Midnight Repair Serum"
+                    data-item-image=""
+                    data-item-description="Retinol night serum with bakuchiol and ceramides. 30ml.">
+                    Add to Bag — $98
+                  </button>
+                </div>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__brand">Luma Skincare</span>
+                <h3 class="product-card__name"><a href="product.html">Midnight Repair Serum</a></h3>
+                <span class="product-card__price">$98.00</span>
+              </div>
+            </div>
+
+            <!-- Product 10 -->
+            <div class="product-card">
+              <div class="product-card__image-wrap">
+                <div class="product-card__placeholder product-card__placeholder--4">
+                  <svg class="product-card__placeholder-icon" viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="1"><rect x="12" y="8" width="24" height="32" rx="4"/><line x1="12" y1="16" x2="36" y2="16"/></svg>
+                </div>
+                <div class="product-card__quick-add">
+                  <button class="btn btn--primary btn--full snipcart-add-item"
+                    data-item-id="luma-skin-tint"
+                    data-item-price="56.00"
+                    data-item-url="/shop.html"
+                    data-item-name="Skin Tint Serum Foundation"
+                    data-item-image=""
+                    data-item-description="Sheer coverage with skincare benefits. Buildable, dewy finish.">
+                    Add to Bag — $56
+                  </button>
+                </div>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__brand">Luma Makeup</span>
+                <h3 class="product-card__name"><a href="product.html">Skin Tint Serum Foundation</a></h3>
+                <span class="product-card__price">$56.00</span>
+                <div class="swatches" style="margin-top: 0.5rem">
+                  <span class="swatch is-active" style="background:#F5DCC8"></span>
+                  <span class="swatch" style="background:#E8C8A8"></span>
+                  <span class="swatch" style="background:#D4A880"></span>
+                  <span class="swatch" style="background:#B88860"></span>
+                  <span class="swatch" style="background:#8B6040"></span>
+                  <span class="swatch" style="background:#5C3820"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 11 -->
+            <div class="product-card">
+              <div class="product-card__image-wrap">
+                <div class="product-card__placeholder product-card__placeholder--5">
+                  <svg class="product-card__placeholder-icon" viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="1"><circle cx="24" cy="28" r="16"/><path d="M18 12h12l2 8H16z"/></svg>
+                </div>
+                <span class="product-card__badge">Bestseller</span>
+                <div class="product-card__quick-add">
+                  <button class="btn btn--primary btn--full snipcart-add-item"
+                    data-item-id="luma-body-souffle"
+                    data-item-price="62.00"
+                    data-item-url="/shop.html"
+                    data-item-name="Cashmere Body Soufflé"
+                    data-item-image=""
+                    data-item-description="Whipped shea body butter with vanilla and jasmine. 200ml.">
+                    Add to Bag — $62
+                  </button>
+                </div>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__brand">Luma Body</span>
+                <h3 class="product-card__name"><a href="product.html">Cashmere Body Soufflé</a></h3>
+                <span class="product-card__price">$62.00</span>
+              </div>
+            </div>
+
+            <!-- Product 12 -->
+            <div class="product-card">
+              <div class="product-card__image-wrap">
+                <div class="product-card__placeholder product-card__placeholder--6">
+                  <svg class="product-card__placeholder-icon" viewBox="0 0 48 48" fill="none" stroke="#C4A882" stroke-width="1"><rect x="8" y="8" width="32" height="32" rx="4"/><line x1="8" y1="24" x2="40" y2="24"/><line x1="24" y1="8" x2="24" y2="40"/></svg>
+                </div>
+                <span class="product-card__badge product-card__badge--new">New</span>
+                <div class="product-card__quick-add">
+                  <button class="btn btn--primary btn--full snipcart-add-item"
+                    data-item-id="luma-ritual-set"
+                    data-item-price="145.00"
+                    data-item-url="/shop.html"
+                    data-item-name="The Ritual Set"
+                    data-item-image=""
+                    data-item-description="Cleanser + Serum + Moisturiser. Complete skincare ritual.">
+                    Add to Bag — $145
+                  </button>
+                </div>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__brand">Luma Sets</span>
+                <h3 class="product-card__name"><a href="product.html">The Ritual Set</a></h3>
+                <span class="product-card__price product-card__price--sale">$145.00 <s>$215.00</s></span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="load-more">
+            <button class="btn btn--secondary">Load More Products</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand-col">
+          <a href="index.html" class="header__logo">Luma</a>
+          <p>Luxury beauty crafted with intention. Clean formulas for the modern woman who values quality over quantity.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="TikTok">
+              <svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Pinterest">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 21c1-4 2-7 3-9s2-4 4-4 2 2 1 4-3 5-3 7"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Shop</h4>
+          <a href="shop.html" class="footer__link">Skincare</a>
+          <a href="shop.html" class="footer__link">Makeup</a>
+          <a href="shop.html" class="footer__link">Body</a>
+          <a href="shop.html" class="footer__link">Gift Sets</a>
+          <a href="shop.html" class="footer__link">Bestsellers</a>
+        </div>
+        <div>
+          <h4 class="footer__col-title">About</h4>
+          <a href="about.html" class="footer__link">Our Story</a>
+          <a href="#" class="footer__link">Ingredients</a>
+          <a href="#" class="footer__link">Sustainability</a>
+          <a href="#" class="footer__link">Press</a>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Help</h4>
+          <a href="#" class="footer__link">Contact Us</a>
+          <a href="#" class="footer__link">Shipping & Returns</a>
+          <a href="#" class="footer__link">FAQs</a>
+          <a href="#" class="footer__link">Track Order</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copyright">&copy; 2026 Luma Beauty. All rights reserved.</span>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div hidden id="snipcart" data-api-key="YOUR_SNIPCART_API_KEY" data-config-modal-style="side"></div>
+  <script async src="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

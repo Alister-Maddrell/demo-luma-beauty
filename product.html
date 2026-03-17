@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radiance Renewal Serum — LUMA</title>
+  <meta name="description" content="Vitamin C brightening serum with hyaluronic acid. Clinically proven to improve radiance in 4 weeks.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" role="banner">
+    <div class="header__inner">
+      <div class="header__left">
+        <a href="index.html" class="header__logo" aria-label="LUMA Home">Luma</a>
+        <nav class="header__nav" role="navigation" aria-label="Main navigation">
+          <div class="header__nav-item"><a href="shop.html" class="header__nav-link">Shop</a></div>
+          <div class="header__nav-item"><a href="shop.html" class="header__nav-link">Skincare</a></div>
+          <div class="header__nav-item"><a href="shop.html" class="header__nav-link">Makeup</a></div>
+          <div class="header__nav-item"><a href="shop.html" class="header__nav-link">Bestsellers</a></div>
+          <div class="header__nav-item"><a href="about.html" class="header__nav-link">Our Story</a></div>
+        </nav>
+      </div>
+      <div class="header__actions">
+        <button class="header__action-btn" aria-label="Search">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+        </button>
+        <button class="header__action-btn" aria-label="Account">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M5 20c0-4 3.5-7 7-7s7 3 7 7"/></svg>
+        </button>
+        <button class="header__action-btn snipcart-checkout" aria-label="Shopping bag">
+          <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="cart-count snipcart-items-count"></span>
+        </button>
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+    <a href="shop.html" class="mobile-nav__link">Shop All</a>
+    <a href="shop.html" class="mobile-nav__link">Skincare</a>
+    <a href="shop.html" class="mobile-nav__link">Makeup</a>
+    <a href="shop.html" class="mobile-nav__link">Body</a>
+    <a href="about.html" class="mobile-nav__link">Our Story</a>
+  </nav>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div style="padding: calc(var(--header-height) + var(--space-xl)) 0 0;">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb__sep">/</span>
+        <a href="shop.html">Skincare</a>
+        <span class="breadcrumb__sep">/</span>
+        <span>Radiance Renewal Serum</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PRODUCT DETAIL ===== -->
+  <section class="product-detail" aria-label="Product detail">
+    <div class="container">
+      <div class="product-detail__layout">
+
+        <!-- Gallery -->
+        <div class="gallery">
+          <div class="gallery__main">
+            <div class="gallery__main-placeholder" style="background: linear-gradient(145deg, #F5E6E0, #EACED3, #F0D5CC);">
+              <svg width="64" height="64" viewBox="0 0 48 48" fill="none" stroke="#C4A882" stroke-width="0.75" style="opacity: 0.4"><rect x="14" y="4" width="20" height="40" rx="10"/><line x1="24" y1="4" x2="24" y2="12"/></svg>
+            </div>
+          </div>
+          <div class="gallery__thumbs">
+            <div class="gallery__thumb is-active">
+              <div class="gallery__thumb-placeholder" style="background: linear-gradient(145deg, #F5E6E0, #EACED3);"></div>
+            </div>
+            <div class="gallery__thumb">
+              <div class="gallery__thumb-placeholder" style="background: linear-gradient(145deg, #EACED3, #F0D5CC);"></div>
+            </div>
+            <div class="gallery__thumb">
+              <div class="gallery__thumb-placeholder" style="background: linear-gradient(145deg, #E8DDD5, #F5E6E0);"></div>
+            </div>
+            <div class="gallery__thumb">
+              <div class="gallery__thumb-placeholder" style="background: linear-gradient(145deg, #F0E8E2, #EACED3);"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-info">
+          <span class="overline">Luma Skincare</span>
+          <h1 class="product-info__title">Radiance Renewal Serum</h1>
+          <div class="reviews__stars" style="margin-bottom: var(--space-sm);">
+            <svg viewBox="0 0 16 16"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.8 5L8 12.4 3.6 14.7l.8-5L.8 6.2l5-.7z"/></svg>
+            <svg viewBox="0 0 16 16"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.8 5L8 12.4 3.6 14.7l.8-5L.8 6.2l5-.7z"/></svg>
+            <svg viewBox="0 0 16 16"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.8 5L8 12.4 3.6 14.7l.8-5L.8 6.2l5-.7z"/></svg>
+            <svg viewBox="0 0 16 16"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.8 5L8 12.4 3.6 14.7l.8-5L.8 6.2l5-.7z"/></svg>
+            <svg viewBox="0 0 16 16" style="opacity:0.3"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.8 5L8 12.4 3.6 14.7l.8-5L.8 6.2l5-.7z"/></svg>
+            <span class="body-sm" style="margin-left: 0.5rem;">(127 reviews)</span>
+          </div>
+          <p class="product-info__price">$89.00</p>
+          <p class="product-info__desc">A potent brightening serum powered by 15% Vitamin C, hyaluronic acid, and niacinamide. Clinically proven to visibly improve radiance, even skin tone, and reduce the appearance of dark spots in just 4 weeks. Lightweight, fast-absorbing formula suitable for all skin types.</p>
+
+          <!-- Size -->
+          <div class="shade-selector">
+            <p class="shade-selector__label">Size: <span class="shade-selector__current">30ml</span></p>
+            <div class="shade-selector__grid">
+              <button class="btn btn--secondary is-active" style="padding: 0.5rem 1.25rem; font-size: 0.75rem;" onclick="this.parentElement.querySelectorAll('.btn').forEach(b=>b.classList.remove('is-active'));this.classList.add('is-active')">30ml</button>
+              <button class="btn btn--secondary" style="padding: 0.5rem 1.25rem; font-size: 0.75rem;" onclick="this.parentElement.querySelectorAll('.btn').forEach(b=>b.classList.remove('is-active'));this.classList.add('is-active')">50ml</button>
+            </div>
+          </div>
+
+          <!-- Quantity -->
+          <div class="quantity-selector">
+            <span class="quantity-selector__label">Quantity</span>
+            <div class="quantity-selector__controls">
+              <button class="quantity-selector__btn quantity-selector__btn--minus" aria-label="Decrease quantity">&minus;</button>
+              <span class="quantity-selector__value">1</span>
+              <button class="quantity-selector__btn quantity-selector__btn--plus" aria-label="Increase quantity">&plus;</button>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="product-info__actions">
+            <button class="btn btn--primary btn--lg" style="flex:1"
+              id="add-to-cart-btn"
+              data-item-id="luma-radiance-serum"
+              data-item-price="89.00"
+              data-item-url="/product.html"
+              data-item-name="Radiance Renewal Serum"
+              data-item-image=""
+              data-item-description="Vitamin C brightening serum with hyaluronic acid. 30ml.">
+              Add to Bag
+            </button>
+            <button class="product-info__wishlist" aria-label="Add to wishlist">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+            </button>
+          </div>
+
+          <div style="display:flex; gap: var(--space-lg); padding: var(--space-lg) 0; border-top: 1px solid var(--light-gray); border-bottom: 1px solid var(--light-gray); margin-bottom: var(--space-xl);">
+            <div style="display:flex; align-items:center; gap:0.5rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 4v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              <span class="body-sm">Free shipping over $75</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:0.5rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+              <span class="body-sm">30-day returns</span>
+            </div>
+          </div>
+
+          <!-- Accordion -->
+          <div class="accordion">
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">
+                Ingredients
+                <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="accordion__content">
+                <div class="accordion__content-inner">
+                  <p><strong>Key Actives:</strong> 15% Vitamin C (Ascorbic Acid), Hyaluronic Acid, Niacinamide (Vitamin B3), Ferulic Acid, Vitamin E</p>
+                  <br>
+                  <p><strong>Full Ingredients:</strong> Aqua, Ascorbic Acid, Propanediol, Glycerin, Niacinamide, Sodium Hyaluronate, Ferulic Acid, Tocopherol, Panthenol, Aloe Barbadensis Leaf Juice, Rosa Damascena Flower Water, Squalane, Cetearyl Olivate, Sorbitan Olivate, Xanthan Gum, Citric Acid, Sodium Hydroxide, Phenoxyethanol, Ethylhexylglycerin.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">
+                How to Use
+                <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="accordion__content">
+                <div class="accordion__content-inner">
+                  <p>Apply 3–4 drops to clean, dry skin morning and evening. Gently press into face and neck, avoiding the eye area. Follow with your favourite Luma moisturiser. For AM use, always follow with SPF.</p>
+                  <br>
+                  <p><em>Tip: For best results, use consistently for at least 4 weeks. Store in a cool, dark place.</em></p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">
+                Shipping & Returns
+                <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="accordion__content">
+                <div class="accordion__content-inner">
+                  <p>Free standard shipping on orders over $75. Express shipping available at checkout. We offer a 30-day return policy on all unopened products. Please contact our customer care team for return authorisation.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reviews -->
+      <div class="reviews reveal">
+        <div class="reviews__header">
+          <div>
+            <h2 class="heading-md">Customer Reviews</h2>
+            <div class="reviews__stars" style="margin-top: 0.5rem;">
+              <svg viewBox="0 0 16 16"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.8 5L8 12.4 3.6 14.7l.8-5L.8 6.2l5-.7z"/></svg>
+              <svg viewBox="0 0 16 16"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.8 5L8 12.4 3.6 14.7l.8-5L.8 6.2l5-.7z"/></svg>
+              <svg viewBox="0 0 16 16"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.8 5L8 12.4 3.6 14.7l.8-5L.8 6.2l5-.7z"/></svg>
+              <svg viewBox="0 0 16 16"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.8 5L8 12.4 3.6 14.7l.8-5L.8 6.2l5-.7z"/></svg>
+              <svg viewBox="0 0 16 16" style="opacity:0.3"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.8 5L8 12.4 3.6 14.7l.8-5L.8 6.2l5-.7z"/></svg>
+              <span class="body-sm" style="margin-left: 0.5rem;">4.2 out of 5 (127 reviews)</span>
+            </div>
+          </div>
+          <button class="btn btn--secondary">Write a Review</button>
+        </div>
+
+        <div class="review">
+          <div class="review__meta">
+            <span class="review__author">Sarah M.</span>
+            <span class="review__date">2 weeks ago</span>
+          </div>
+          <div class="reviews__stars" style="margin-bottom: 0.5rem;">
+            <svg viewBox="0 0 16 16"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.8 5L8 12.4 3.6 14.7l.8-5L.8 6.2l5-.7z"/></svg>
+            <svg viewBox="0 0 16 16"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.8 5L8 12.4 3.6 14.7l.8-5L.8 6.2l5-.7z"/></svg>
+            <svg viewBox="0 0 16 16"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.8 5L8 12.4 3.6 14.7l.8-5L.8 6.2l5-.7z"/></svg>
+            <svg viewBox="0 0 16 16"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.8 5L8 12.4 3.6 14.7l.8-5L.8 6.2l5-.7z"/></svg>
+            <svg viewBox="0 0 16 16"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.8 5L8 12.4 3.6 14.7l.8-5L.8 6.2l5-.7z"/></svg>
+          </div>
+          <p class="review__text">Absolutely love this serum. My skin looks noticeably brighter after just three weeks. The texture is so lightweight — it absorbs instantly and layers beautifully under makeup. Will definitely repurchase.</p>
+        </div>
+
+        <div class="review">
+          <div class="review__meta">
+            <span class="review__author">Jessica L.</span>
+            <span class="review__date">1 month ago</span>
+          </div>
+          <div class="reviews__stars" style="margin-bottom: 0.5rem;">
+            <svg viewBox="0 0 16 16"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.8 5L8 12.4 3.6 14.7l.8-5L.8 6.2l5-.7z"/></svg>
+            <svg viewBox="0 0 16 16"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.8 5L8 12.4 3.6 14.7l.8-5L.8 6.2l5-.7z"/></svg>
+            <svg viewBox="0 0 16 16"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.8 5L8 12.4 3.6 14.7l.8-5L.8 6.2l5-.7z"/></svg>
+            <svg viewBox="0 0 16 16"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.8 5L8 12.4 3.6 14.7l.8-5L.8 6.2l5-.7z"/></svg>
+            <svg viewBox="0 0 16 16" style="opacity:0.3"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.8 5L8 12.4 3.6 14.7l.8-5L.8 6.2l5-.7z"/></svg>
+          </div>
+          <p class="review__text">Really impressed with the ingredient list and the results. My hyperpigmentation has faded significantly. Only reason for 4 stars is I wish the bottle was a bit larger for the price, but the quality is undeniable.</p>
+        </div>
+
+        <div class="review">
+          <div class="review__meta">
+            <span class="review__author">Priya K.</span>
+            <span class="review__date">1 month ago</span>
+          </div>
+          <div class="reviews__stars" style="margin-bottom: 0.5rem;">
+            <svg viewBox="0 0 16 16"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.8 5L8 12.4 3.6 14.7l.8-5L.8 6.2l5-.7z"/></svg>
+            <svg viewBox="0 0 16 16"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.8 5L8 12.4 3.6 14.7l.8-5L.8 6.2l5-.7z"/></svg>
+            <svg viewBox="0 0 16 16"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.8 5L8 12.4 3.6 14.7l.8-5L.8 6.2l5-.7z"/></svg>
+            <svg viewBox="0 0 16 16"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.8 5L8 12.4 3.6 14.7l.8-5L.8 6.2l5-.7z"/></svg>
+            <svg viewBox="0 0 16 16"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.8 5L8 12.4 3.6 14.7l.8-5L.8 6.2l5-.7z"/></svg>
+          </div>
+          <p class="review__text">This is the best Vitamin C serum I've tried, and I've tried many. No irritation, no stickiness, just gorgeous glowing skin. The packaging feels so premium too — it makes my whole routine feel special.</p>
+        </div>
+      </div>
+
+      <!-- You May Also Like -->
+      <div class="related-products reveal">
+        <div class="section__header">
+          <span class="overline">Complete Your Ritual</span>
+          <h2 class="heading-lg">You May Also Like</h2>
+        </div>
+        <div class="products-grid" style="margin-top: var(--space-2xl);">
+          <div class="product-card">
+            <div class="product-card__image-wrap">
+              <div class="product-card__placeholder product-card__placeholder--2">
+                <svg class="product-card__placeholder-icon" viewBox="0 0 48 48" fill="none" stroke="#C4A882" stroke-width="1"><circle cx="24" cy="28" r="16"/><path d="M18 12h12l2 8H16z"/></svg>
+              </div>
+            </div>
+            <div class="product-card__info">
+              <span class="product-card__brand">Luma Skincare</span>
+              <h3 class="product-card__name"><a href="product.html">Cloud Silk Moisturiser</a></h3>
+              <span class="product-card__price">$72.00</span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-card__image-wrap">
+              <div class="product-card__placeholder product-card__placeholder--3">
+                <svg class="product-card__placeholder-icon" viewBox="0 0 48 48" fill="none" stroke="#C4A882" stroke-width="1"><rect x="12" y="8" width="24" height="32" rx="4"/><line x1="12" y1="16" x2="36" y2="16"/></svg>
+              </div>
+            </div>
+            <div class="product-card__info">
+              <span class="product-card__brand">Luma Skincare</span>
+              <h3 class="product-card__name"><a href="product.html">Petal Soft Cleanser</a></h3>
+              <span class="product-card__price">$54.00</span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-card__image-wrap">
+              <div class="product-card__placeholder product-card__placeholder--1">
+                <svg class="product-card__placeholder-icon" viewBox="0 0 48 48" fill="none" stroke="#C4A882" stroke-width="1"><rect x="10" y="6" width="28" height="36" rx="6"/><circle cx="24" cy="24" r="8"/></svg>
+              </div>
+            </div>
+            <div class="product-card__info">
+              <span class="product-card__brand">Luma Skincare</span>
+              <h3 class="product-card__name"><a href="product.html">Mineral Veil SPF 50+</a></h3>
+              <span class="product-card__price">$52.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div style="height: var(--space-4xl);"></div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand-col">
+          <a href="index.html" class="header__logo">Luma</a>
+          <p>Luxury beauty crafted with intention. Clean formulas for the modern woman who values quality over quantity.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="TikTok">
+              <svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Pinterest">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 21c1-4 2-7 3-9s2-4 4-4 2 2 1 4-3 5-3 7"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Shop</h4>
+          <a href="shop.html" class="footer__link">Skincare</a>
+          <a href="shop.html" class="footer__link">Makeup</a>
+          <a href="shop.html" class="footer__link">Body</a>
+          <a href="shop.html" class="footer__link">Gift Sets</a>
+        </div>
+        <div>
+          <h4 class="footer__col-title">About</h4>
+          <a href="about.html" class="footer__link">Our Story</a>
+          <a href="#" class="footer__link">Ingredients</a>
+          <a href="#" class="footer__link">Sustainability</a>
+          <a href="#" class="footer__link">Press</a>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Help</h4>
+          <a href="#" class="footer__link">Contact Us</a>
+          <a href="#" class="footer__link">Shipping & Returns</a>
+          <a href="#" class="footer__link">FAQs</a>
+          <a href="#" class="footer__link">Track Order</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copyright">&copy; 2026 Luma Beauty. All rights reserved.</span>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div hidden id="snipcart" data-api-key="YOUR_SNIPCART_API_KEY" data-config-modal-style="side"></div>
+  <script async src="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Wire up the product page Add to Cart with Snipcart class
+    const addBtn = document.getElementById('add-to-cart-btn');
+    if (addBtn) {
+      addBtn.classList.add('snipcart-add-item');
+    }
+  </script>
+</body>
+</html>
