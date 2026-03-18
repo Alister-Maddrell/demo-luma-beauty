@@ -20,37 +20,33 @@ const categories = [
 
 <Layout title="LUMA — Luxury Beauty & Skincare">
   <!-- HERO -->
-  <section class="relative min-h-screen flex items-center pt-[72px] overflow-hidden">
-    <!-- Split layout: text left, image right -->
-    <div class="max-w-[1400px] mx-auto px-6 lg:px-10 w-full">
-      <div class="grid lg:grid-cols-2 gap-10 lg:gap-6 items-center min-h-[calc(100vh-72px)]">
-        <!-- Text -->
-        <div class="py-16 lg:py-0 order-2 lg:order-1">
-          <p class="overline animate-fade-up mb-6">Spring 2026 Collection</p>
-          <h1 class="text-[clamp(3rem,7vw,5rem)] font-extralight leading-[1.02] tracking-[-0.03em] text-luma-black animate-fade-up delay-100">
-            Redefine<br>Your Ritual
-          </h1>
-          <p class="text-base lg:text-[1.0625rem] text-luma-stone leading-relaxed mt-7 mb-10 max-w-md animate-fade-up delay-200">
-            Luxury skincare and beauty crafted with intention. Clean formulas, elevated experience, radiant results.
-          </p>
-          <div class="flex flex-wrap items-center gap-5 animate-fade-up delay-300">
-            <a href="/shop" class="btn-shine inline-flex items-center justify-center px-10 py-4 bg-luma-black text-white text-[0.7rem] font-semibold tracking-[0.18em] uppercase hover:bg-luma-charcoal hover:-translate-y-0.5 hover:shadow-lg transition-all">
-              Shop Now
-            </a>
-            <a href="/about" class="inline-flex items-center gap-2 text-[0.7rem] font-semibold tracking-[0.14em] uppercase text-luma-charcoal hover:text-luma-copper transition-all">
-              Our Philosophy
-              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
-            </a>
-          </div>
-        </div>
-        <!-- Image -->
-        <div class="relative order-1 lg:order-2 h-[50vh] lg:h-[calc(100vh-72px)] overflow-hidden animate-fade-in delay-100">
-          <img
-            src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&h=1600&fit=crop&q=85&crop=faces"
-            alt="Woman with luminous skin"
-            class="w-full h-full object-cover"
-            loading="eager"
-          />
+  <section class="relative min-h-screen flex items-end lg:items-center pt-[72px] overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1800&h=1200&fit=crop&q=85&crop=faces"
+        alt="Woman with luminous skin"
+        class="w-full h-full object-cover"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-luma-black/70 via-luma-black/40 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-luma-black/50 via-transparent to-transparent lg:hidden"></div>
+    </div>
+    <div class="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 w-full pb-20 lg:pb-0">
+      <div class="max-w-xl">
+        <h1 class="text-[clamp(3rem,7vw,5rem)] font-extralight leading-[1.02] tracking-[-0.03em] text-white animate-fade-up">
+          Redefine<br>Your Ritual
+        </h1>
+        <p class="text-base lg:text-[1.0625rem] text-white/75 leading-relaxed mt-7 mb-10 max-w-md animate-fade-up delay-100">
+          Luxury skincare and beauty crafted with intention. Clean formulas, elevated experience, radiant results.
+        </p>
+        <div class="flex flex-wrap items-center gap-5 animate-fade-up delay-200">
+          <a href="/shop" class="btn-shine inline-flex items-center justify-center px-10 py-4 bg-white text-luma-black text-[0.7rem] font-semibold tracking-[0.18em] uppercase hover:bg-luma-cream hover:-translate-y-0.5 hover:shadow-lg transition-all">
+            Shop Now
+          </a>
+          <a href="/about" class="inline-flex items-center gap-2 text-[0.7rem] font-semibold tracking-[0.14em] uppercase text-white/80 hover:text-white transition-all">
+            Our Philosophy
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+          </a>
         </div>
       </div>
     </div>
@@ -76,7 +72,7 @@ const categories = [
   <section class="py-24 lg:py-32">
     <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
       <div class="text-center mb-14" data-reveal>
-        <p class="overline mb-3">Curated For You</p>
+
         <h2 class="text-[clamp(2rem,4vw,3.25rem)] font-extralight tracking-[-0.02em]">Shop by Category</h2>
       </div>
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
@@ -98,7 +94,7 @@ const categories = [
   <section class="py-24 lg:py-32 bg-luma-ivory">
     <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
       <div class="text-center mb-14" data-reveal>
-        <p class="overline mb-3">Just Arrived</p>
+
         <h2 class="text-[clamp(2rem,4vw,3.25rem)] font-extralight tracking-[-0.02em]">Featured Products</h2>
         <p class="text-luma-stone mt-3 max-w-lg mx-auto">Our newest formulations, designed for your most luminous skin yet.</p>
       </div>
@@ -152,7 +148,7 @@ const categories = [
           <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=900&h=1100&fit=crop&q=80" alt="Woman applying skincare" class="w-full h-full object-cover" loading="lazy" />
         </div>
         <div class="lg:px-20 xl:px-28" data-reveal>
-          <p class="overline mb-4">Our Philosophy</p>
+
           <h2 class="text-[clamp(2rem,4vw,3.25rem)] font-extralight tracking-[-0.02em] leading-tight">Beauty With<br>Intention</h2>
           <p class="text-luma-charcoal leading-relaxed mt-6 max-w-md">At Luma, we believe luxury is not excess — it's intention. Every formula is crafted to honour your skin with the purest ingredients, sustainably sourced and scientifically proven.</p>
           <p class="text-luma-charcoal leading-relaxed mt-4 max-w-md">We create for the woman who values quality over quantity, who sees her skincare ritual as a moment of stillness in a world that never stops.</p>
@@ -178,7 +174,7 @@ const categories = [
   <!-- NEWSLETTER -->
   <section class="py-24 lg:py-32">
     <div class="max-w-xl mx-auto px-6 text-center" data-reveal>
-      <p class="overline mb-3">Stay Connected</p>
+
       <h2 class="text-[clamp(2rem,4vw,3.25rem)] font-extralight tracking-[-0.02em]">Join the Luma World</h2>
       <p class="text-luma-stone mt-3 mb-10">Be the first to discover new arrivals, exclusive offers, and beauty rituals curated just for you.</p>
       <form class="flex border border-luma-sand/70 focus-within:border-luma-black transition-colors duration-300" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Thank you ✓'; this.querySelector('input').value='';">

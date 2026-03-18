@@ -26,12 +26,16 @@ const filters = [
 
 <Layout title="Shop All — LUMA" description="Browse the complete LUMA collection of luxury skincare, makeup, and body care.">
   <!-- BANNER -->
-  <section class="pt-[72px]">
-    <div class="bg-luma-cream py-16 lg:py-20 text-center">
-      <div class="max-w-[1400px] mx-auto px-6">
-        <h1 class="text-[clamp(2rem,4vw,3.25rem)] font-extralight tracking-[-0.02em] animate-fade-up">Shop All</h1>
-        <div class="flex items-center justify-center gap-2 mt-3 text-xs text-luma-warm animate-fade-up delay-100">
-          <a href="/" class="hover:text-luma-black transition-colors">Home</a>
+  <section class="relative pt-[72px] overflow-hidden">
+    <div class="relative py-20 lg:py-28 text-center">
+      <div class="absolute inset-0">
+        <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=1800&h=600&fit=crop&q=80" alt="Beauty products" class="w-full h-full object-cover" loading="eager" />
+        <div class="absolute inset-0 bg-luma-black/45"></div>
+      </div>
+      <div class="relative z-10 max-w-[1400px] mx-auto px-6">
+        <h1 class="text-[clamp(2rem,4vw,3.25rem)] font-extralight tracking-[-0.02em] text-white animate-fade-up">Shop All</h1>
+        <div class="flex items-center justify-center gap-2 mt-3 text-xs text-white/60 animate-fade-up delay-100">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
           <span>/</span>
           <span>Shop All</span>
         </div>
