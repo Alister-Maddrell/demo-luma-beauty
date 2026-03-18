@@ -21,6 +21,206 @@ const { title, description = "Luxury skincare & beauty crafted with intention. C
   <style>
     @import '../styles/global.css';
   </style>
+  <style is:global>
+    /* ============================================
+       MOBILE LAYOUT OPTIMISATIONS
+       ============================================ */
+    @media (max-width: 767px) {
+      /* Tighter section padding */
+      section[class*="py-24"],
+      section[class*="py-28"] {
+        padding-top: 3.5rem !important;
+        padding-bottom: 3.5rem !important;
+      }
+
+      /* Hero: reduce to 85vh so CTAs are visible above fold */
+      section[class*="min-h-screen"] {
+        min-height: 85vh !important;
+      }
+      section[class*="min-h-screen"] [class*="pb-20"] {
+        padding-bottom: 2.5rem !important;
+      }
+
+      /* Hero CTA stack vertically */
+      section[class*="min-h-screen"] [class*="flex-wrap"] {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.875rem !important;
+      }
+      section[class*="min-h-screen"] .btn-shine {
+        width: 100% !important;
+        text-align: center !important;
+      }
+      section[class*="min-h-screen"] [class*="flex-wrap"] a:last-child {
+        justify-content: center !important;
+      }
+
+      /* Hero description tighter spacing */
+      section[class*="min-h-screen"] [class*="mt-7"] {
+        margin-top: 1rem !important;
+      }
+      section[class*="min-h-screen"] [class*="mb-10"] {
+        margin-bottom: 1.5rem !important;
+      }
+
+      /* Section heading margins tighter */
+      [class*="mb-14"] {
+        margin-bottom: 2rem !important;
+      }
+      [class*="mb-16"] {
+        margin-bottom: 2.5rem !important;
+      }
+
+      /* Category grid tighter */
+      section [class*="grid-cols-2"][class*="grid-cols-4"] {
+        gap: 0.5rem !important;
+      }
+
+      /* All 2-col grids — slightly looser for readability */
+      .grid[class*="grid-cols-2"] {
+        gap: 1rem 0.75rem !important;
+      }
+
+      /* Product card images */
+      [class*="aspect-"][class*="mb-4"] {
+        margin-bottom: 0.5rem !important;
+      }
+
+      /* Brand story image shorter */
+      [class*="aspect-"][class*="4/5"] {
+        aspect-ratio: 4/3 !important;
+      }
+
+      /* Quote sections tighter */
+      section.grain {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+      }
+      section[class*="bg-luma-ivory"] {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+      }
+      blockquote {
+        font-size: clamp(1.25rem, 5.5vw, 1.75rem) !important;
+      }
+
+      /* Newsletter form stacks vertically */
+      section [class*="max-w-xl"] [class*="mb-10"] {
+        margin-bottom: 1.5rem !important;
+      }
+      section [class*="max-w-xl"] form {
+        flex-direction: column !important;
+      }
+      section [class*="max-w-xl"] form input {
+        padding: 0.875rem 1rem !important;
+        text-align: center !important;
+      }
+      section [class*="max-w-xl"] form button {
+        padding: 0.875rem 1.5rem !important;
+      }
+
+      /* Footer tighter */
+      footer {
+        padding-top: 3rem !important;
+      }
+      footer .grid {
+        gap: 2rem !important;
+      }
+      footer [class*="mb-16"] {
+        margin-bottom: 2.5rem !important;
+      }
+
+      /* Shop banner tighter */
+      section [class*="py-20"] {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+      }
+
+      /* Shop sort bar stacks */
+      [class*="justify-between"][class*="mb-8"] {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.5rem !important;
+      }
+
+      /* About hero height */
+      [class*="min-h-"][class*="70vh"] {
+        min-height: auto !important;
+      }
+      [class*="h-"][class*="50vh"] {
+        height: 40vh !important;
+      }
+
+      /* About values numbers */
+      p.text-5xl {
+        font-size: 2.5rem !important;
+      }
+
+      /* About CTA dark section */
+      section[class*="bg-luma-black"] {
+        padding-top: 3.5rem !important;
+        padding-bottom: 3.5rem !important;
+      }
+
+      /* Product page: gallery thumbs */
+      .grid[class*="grid-cols-4"] {
+        gap: 0.5rem !important;
+      }
+
+      /* Product page: perks stack */
+      [class*="gap-6"][class*="mt-6"][class*="border-y"] {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+      }
+
+      /* Product page: reviews & related */
+      [class*="mt-20"][class*="pt-16"] {
+        margin-top: 3rem !important;
+        padding-top: 2.5rem !important;
+      }
+
+      /* Product add-to-bag smaller text */
+      [class*="gap-3"][class*="mt-8"] .btn-shine {
+        font-size: 0.625rem !important;
+      }
+
+      /* About hero text padding tighter */
+      section[class*="overflow-hidden"] [class*="py-16"] {
+        padding-top: 2rem !important;
+        padding-bottom: 1.5rem !important;
+      }
+
+      /* View All / Load More buttons tighter spacing */
+      [class*="mt-14"],
+      [class*="mt-16"] {
+        margin-top: 2rem !important;
+      }
+
+      /* Product page: reduce top space on product detail */
+      section[class*="pb-20"] {
+        padding-bottom: 2.5rem !important;
+      }
+    }
+
+    @media (max-width: 479px) {
+      h1 {
+        font-size: clamp(2rem, 9vw, 2.75rem) !important;
+      }
+      h2 {
+        font-size: clamp(1.5rem, 7vw, 2rem) !important;
+      }
+
+      /* Newsletter form input/button tighter */
+      section [class*="max-w-xl"] form input {
+        padding: 0.75rem 0.875rem !important;
+        font-size: 0.8125rem !important;
+      }
+      section [class*="max-w-xl"] form button {
+        padding: 0.75rem 1.25rem !important;
+        font-size: 0.6rem !important;
+      }
+    }
+  </style>
 </head>
 <body class="min-h-screen overflow-x-hidden">
   <!-- Header -->
