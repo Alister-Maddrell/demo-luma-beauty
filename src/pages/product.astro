@@ -63,7 +63,7 @@ const reviewsList = [
         <!-- Info -->
         <div class="py-4 lg:py-8">
           <p class="overline mb-3">Luma {product.category}</p>
-          <h1 class="font-display text-[clamp(1.75rem,3vw,2.5rem)] font-medium leading-tight">{product.name}</h1>
+          <h1 class="text-[clamp(1.75rem,3vw,2.5rem)] font-light tracking-[-0.01em] leading-tight">{product.name}</h1>
 
           <!-- Stars -->
           <div class="flex items-center gap-2 mt-3">
@@ -164,7 +164,7 @@ const reviewsList = [
       <div class="mt-20 pt-16 border-t border-luma-cream" data-reveal>
         <div class="flex items-start justify-between mb-10">
           <div>
-            <h2 class="font-display text-2xl lg:text-3xl font-medium">Customer Reviews</h2>
+            <h2 class="text-2xl lg:text-3xl font-extralight tracking-[-0.02em]">Customer Reviews</h2>
             <div class="flex items-center gap-2 mt-2">
               <div class="flex gap-0.5 text-luma-copper">
                 {[1,2,3,4].map(() => <svg class="w-3.5 h-3.5" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.8 5L8 12.4 3.6 14.7l.8-5L.8 6.2l5-.7z"/></svg>)}
@@ -193,7 +193,7 @@ const reviewsList = [
       <div class="mt-20 pt-16 border-t border-luma-cream" data-reveal>
         <div class="text-center mb-12">
           <p class="overline mb-3">Complete Your Ritual</p>
-          <h2 class="font-display text-2xl lg:text-3xl font-medium">You May Also Like</h2>
+          <h2 class="text-2xl lg:text-3xl font-extralight tracking-[-0.02em]">You May Also Like</h2>
         </div>
         <div class="grid grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-10">
           {related.map(item => (
@@ -202,7 +202,7 @@ const reviewsList = [
                 <img src={item.image} alt={item.name} class="w-full h-full object-cover" loading="lazy" />
               </a>
               <p class="text-[0.6rem] font-semibold tracking-[0.18em] uppercase text-luma-warm mb-1">Luma {item.category}</p>
-              <h3 class="font-display text-lg font-medium"><a href="/product" class="hover:text-luma-copper transition-colors">{item.name}</a></h3>
+              <h3 class="text-lg font-normal"><a href="/product" class="hover:text-luma-copper transition-colors">{item.name}</a></h3>
               <p class="text-sm font-semibold text-luma-charcoal mt-1">${item.price}.00</p>
             </div>
           ))}

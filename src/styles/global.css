@@ -42,7 +42,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-display);
+    font-family: var(--font-body);
   }
 
   p {
@@ -143,11 +143,10 @@
 /* Overline */
 .overline {
   font-family: var(--font-body);
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--color-luma-copper);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--color-luma-stone);
 }
 
 /* Gallery crossfade */
