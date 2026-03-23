@@ -197,20 +197,20 @@ details[open] summary {
 
 /* ---- Mobile hero fix: push heading up to ~30-35% of viewport ---- */
 @media (max-width: 1023px) {
-  /* Reduce hero height and override items-end to center text vertically */
-  section.min-h-screen.flex.items-end {
-    min-height: 80vh !important;
+  /* Reduce hero height and center content vertically instead of bottom-aligning */
+  section:first-of-type {
+    min-height: 80dvh !important;
     align-items: center !important;
   }
 
   /* Remove the large bottom padding that pushes content further down */
-  section.min-h-screen .pb-20 {
+  section:first-of-type > .relative.z-10 {
     padding-bottom: 0 !important;
   }
 
   /* Reposition the background image to show face in upper portion */
-  section.min-h-screen > .absolute.inset-0 > img {
-    object-position: center 25%;
+  section:first-of-type > .absolute img {
+    object-position: center 25% !important;
   }
 }
 
