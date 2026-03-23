@@ -196,21 +196,21 @@ details[open] summary {
 }
 
 /* ---- Mobile hero fix: push heading up to ~30-35% of viewport ---- */
-@media (max-width: 1023px) {
-  /* Reduce hero height and center content vertically instead of bottom-aligning */
-  section:first-of-type {
-    min-height: 80dvh !important;
-    align-items: center !important;
-  }
+/* Must use @layer utilities to override Tailwind v4 utility classes */
+@layer utilities {
+  @media (max-width: 1023px) {
+    section:first-of-type {
+      min-height: 80dvh !important;
+      align-items: center !important;
+    }
 
-  /* Remove the large bottom padding that pushes content further down */
-  section:first-of-type > .relative.z-10 {
-    padding-bottom: 0 !important;
-  }
+    section:first-of-type > .relative.z-10 {
+      padding-bottom: 0 !important;
+    }
 
-  /* Reposition the background image to show face in upper portion */
-  section:first-of-type > .absolute img {
-    object-position: center 25% !important;
+    section:first-of-type > .absolute img {
+      object-position: center 25% !important;
+    }
   }
 }
 
