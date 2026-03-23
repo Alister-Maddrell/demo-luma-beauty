@@ -195,6 +195,25 @@ details[open] summary {
   transform: translateX(100%);
 }
 
+/* ---- Mobile hero fix: push heading up to ~30-35% of viewport ---- */
+@media (max-width: 1023px) {
+  /* Reduce hero height and override items-end to center text vertically */
+  section.min-h-screen.flex.items-end {
+    min-height: 80vh !important;
+    align-items: center !important;
+  }
+
+  /* Remove the large bottom padding that pushes content further down */
+  section.min-h-screen .pb-20 {
+    padding-bottom: 0 !important;
+  }
+
+  /* Reposition the background image to show face in upper portion */
+  section.min-h-screen > .absolute.inset-0 > img {
+    object-position: center 25%;
+  }
+}
+
 /* Grain overlay */
 .grain::after {
   content: '';
