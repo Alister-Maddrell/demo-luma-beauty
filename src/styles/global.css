@@ -195,24 +195,7 @@ details[open] summary {
   transform: translateX(100%);
 }
 
-/* ---- Mobile hero fix: push heading up to ~30-35% of viewport ---- */
-/* Must use @layer utilities to override Tailwind v4 utility classes */
-@layer utilities {
-  @media (max-width: 1023px) {
-    section:first-of-type {
-      min-height: 80dvh !important;
-      align-items: center !important;
-    }
-
-    section:first-of-type > .relative.z-10 {
-      padding-bottom: 0 !important;
-    }
-
-    section:first-of-type > .absolute img {
-      object-position: center 25% !important;
-    }
-  }
-}
+/* Mobile hero overrides are in Layout.astro <style is:global> to bypass Tailwind layers */
 
 /* Grain overlay */
 .grain::after {

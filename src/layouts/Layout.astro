@@ -33,12 +33,13 @@ const { title, description = "Luxury skincare & beauty crafted with intention. C
         padding-bottom: 3.5rem !important;
       }
 
-      /* Hero: reduce to 85vh so CTAs are visible above fold */
+      /* Hero: reduce height and center content so heading is at ~30% viewport */
       section[class*="min-h-screen"] {
-        min-height: 85vh !important;
+        min-height: 75dvh !important;
+        align-items: center !important;
       }
       section[class*="min-h-screen"] [class*="pb-20"] {
-        padding-bottom: 2.5rem !important;
+        padding-bottom: 0 !important;
       }
 
       /* Hero CTA stack vertically */
