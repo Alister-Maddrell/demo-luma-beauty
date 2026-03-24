@@ -56,11 +56,13 @@ const { title, description = "Luxury skincare & beauty crafted with intention. C
       /* Hero CTA stack vertically */
       section[class*="min-h-screen"] [class*="flex-wrap"] {
         flex-direction: column !important;
-        align-items: stretch !important;
+        align-items: flex-start !important;
         gap: 0.875rem !important;
       }
       section[class*="min-h-screen"] .btn-shine {
-        width: 100% !important;
+        width: auto !important;
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
         text-align: center !important;
       }
       section[class*="min-h-screen"] [class*="flex-wrap"] a:last-child {
