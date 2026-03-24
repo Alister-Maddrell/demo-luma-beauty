@@ -20,30 +20,31 @@ const categories = [
 
 <Layout title="LUMA — Luxury Beauty & Skincare">
   <!-- HERO -->
-  <section class="relative min-h-screen flex items-end lg:items-center pt-[72px] overflow-hidden">
-    <div class="absolute inset-0">
+  <section class="luma-hero">
+    <div class="luma-hero-bg">
       <img
         src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1800&h=1200&fit=crop&q=85&crop=faces"
         alt="Woman with luminous skin"
-        class="w-full h-full object-cover"
         loading="eager"
       />
-      <div class="absolute inset-0 bg-gradient-to-r from-luma-black/70 via-luma-black/40 to-transparent"></div>
-      <div class="absolute inset-0 bg-gradient-to-t from-luma-black/50 via-transparent to-transparent lg:hidden"></div>
     </div>
-    <div class="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 w-full pb-20 lg:pb-0">
-      <div class="max-w-xl">
-        <h1 class="text-[clamp(3rem,7vw,5rem)] font-extralight leading-[1.02] tracking-[-0.03em] text-white animate-fade-up">
+    <div class="luma-hero-overlay"></div>
+
+    <div class="luma-hero-content">
+      <!-- Main card -->
+      <div class="luma-hero-card animate-fade-up">
+        <p class="luma-hero-overline">Luxury Skincare & Beauty</p>
+        <h1 class="luma-hero-h1">
           Redefine<br>Your Ritual
         </h1>
-        <p class="text-base lg:text-[1.0625rem] text-white/75 leading-relaxed mt-7 mb-10 max-w-md animate-fade-up delay-100">
-          Luxury skincare and beauty crafted with intention. Clean formulas, elevated experience, radiant results.
+        <p class="luma-hero-desc">
+          Clean formulas, elevated experience, radiant results. Crafted with intention.
         </p>
-        <div class="flex flex-wrap items-center gap-5 animate-fade-up delay-200">
-          <a href="/shop" class="btn-shine inline-flex items-center justify-center px-10 py-4 bg-white text-luma-black text-[0.7rem] font-semibold tracking-[0.18em] uppercase hover:bg-luma-cream hover:-translate-y-0.5 hover:shadow-lg transition-all">
+        <div class="luma-hero-ctas">
+          <a href="/shop" class="btn-shine luma-hero-btn-primary">
             Shop Now
           </a>
-          <a href="/about" class="inline-flex items-center gap-2 text-[0.7rem] font-semibold tracking-[0.14em] uppercase text-white/80 hover:text-white transition-all">
+          <a href="/about" class="luma-hero-btn-secondary">
             Our Philosophy
             <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
           </a>

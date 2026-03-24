@@ -34,6 +34,164 @@ const { title, description = "Luxury skincare & beauty crafted with intention. C
     }
 
     /* ============================================
+       LUMA HERO — Frosted glass container
+       ============================================ */
+    .luma-hero {
+      position: relative;
+      min-height: 100dvh;
+      display: flex;
+      align-items: flex-start;
+      overflow: hidden;
+    }
+
+    .luma-hero-bg {
+      position: absolute;
+      inset: 0;
+    }
+
+    .luma-hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+    }
+
+    .luma-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg,
+        rgba(17, 17, 16, 0.65) 0%,
+        rgba(17, 17, 16, 0.4) 40%,
+        rgba(17, 17, 16, 0.3) 70%,
+        rgba(17, 17, 16, 0.6) 100%);
+    }
+
+    .luma-hero-content {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      padding: 5rem 1.25rem 2rem;
+    }
+
+    .luma-hero-card {
+      background: rgba(17, 17, 16, 0.45);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 1.5rem;
+    }
+
+    .luma-hero-overline {
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-luma-copper-light);
+      margin-bottom: 0.75rem;
+    }
+
+    .luma-hero-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
+      font-weight: 300;
+      font-style: normal;
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+
+    .luma-hero-desc {
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.55;
+      max-width: 360px;
+      margin-bottom: 1.25rem;
+    }
+
+    .luma-hero-ctas {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .luma-hero-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.875rem 2.5rem;
+      background: #fff;
+      color: var(--color-luma-black);
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s;
+      width: 100%;
+    }
+
+    .luma-hero-btn-primary:hover {
+      background: var(--color-luma-cream);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+
+    .luma-hero-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .luma-hero-btn-secondary:hover {
+      color: #fff;
+    }
+
+    /* Desktop hero */
+    @media (min-width: 768px) {
+      .luma-hero {
+        align-items: center;
+      }
+
+      .luma-hero-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 6rem 2.5rem 4rem;
+      }
+
+      .luma-hero-card {
+        max-width: 520px;
+        padding: 2.5rem;
+        border-radius: 24px;
+      }
+
+      .luma-hero-h1 {
+        font-size: clamp(3rem, 5vw, 5rem);
+      }
+
+      .luma-hero-ctas {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .luma-hero-btn-primary {
+        width: auto;
+      }
+    }
+
+    /* ============================================
        MOBILE LAYOUT OPTIMISATIONS
        ============================================ */
     @media (max-width: 767px) {
@@ -44,35 +202,7 @@ const { title, description = "Luxury skincare & beauty crafted with intention. C
         padding-bottom: 3.5rem !important;
       }
 
-      /* Hero: reduce height and center content so heading is at ~30% viewport */
-      section[class*="min-h-screen"] {
-        min-height: 75dvh !important;
-        align-items: center !important;
-      }
-      section[class*="min-h-screen"] [class*="pb-20"] {
-        padding-bottom: 0 !important;
-      }
-
-      /* Hero CTA stack vertically */
-      section[class*="min-h-screen"] [class*="flex-wrap"] {
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        gap: 0.875rem !important;
-      }
-      section[class*="min-h-screen"] .btn-shine {
-        width: auto !important;
-        padding-left: 2rem !important;
-        padding-right: 2rem !important;
-        text-align: center !important;
-      }
-      section[class*="min-h-screen"] [class*="flex-wrap"] a:last-child {
-        justify-content: center !important;
-      }
-
-      /* Hero description tighter spacing */
-      section[class*="min-h-screen"] [class*="mt-7"] {
-        margin-top: 1rem !important;
-      }
+      /* Old hero overrides removed — now using .luma-hero classes */
       section[class*="min-h-screen"] [class*="mb-10"] {
         margin-bottom: 1.5rem !important;
       }
