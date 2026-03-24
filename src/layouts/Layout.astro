@@ -70,7 +70,7 @@ const { title, description = "Luxury skincare & beauty crafted with intention. C
       position: relative;
       z-index: 10;
       width: 100%;
-      padding: 5rem 1.25rem 2rem;
+      padding: 6.5rem 1.25rem 2rem;
     }
 
     .luma-hero-card {
@@ -122,9 +122,9 @@ const { title, description = "Luxury skincare & beauty crafted with intention. C
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 0.875rem 2.5rem;
-      background: #fff;
-      color: var(--color-luma-black);
+      padding: 0.875rem 2rem !important;
+      background: #fff !important;
+      color: var(--color-luma-black) !important;
       font-family: var(--font-body);
       font-size: 0.7rem;
       font-weight: 600;
@@ -133,6 +133,8 @@ const { title, description = "Luxury skincare & beauty crafted with intention. C
       text-decoration: none;
       transition: all 0.3s;
       width: 100%;
+      box-sizing: border-box;
+      max-width: 100%;
     }
 
     .luma-hero-btn-primary:hover {
