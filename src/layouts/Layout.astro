@@ -71,6 +71,9 @@ const { title, description = "Luxury skincare & beauty crafted with intention. C
       z-index: 10;
       width: 100%;
       padding: 0 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
     }
 
     .luma-hero-card {
@@ -78,8 +81,16 @@ const { title, description = "Luxury skincare & beauty crafted with intention. C
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 20px;
+      border-radius: 16px;
       padding: 1.5rem;
+    }
+
+    .luma-hero-card-heading {
+      padding: 1.5rem 1.5rem 1.75rem;
+    }
+
+    .luma-hero-card-action {
+      padding: 1.25rem 1.5rem;
     }
 
     .luma-hero-overline {
@@ -100,7 +111,7 @@ const { title, description = "Luxury skincare & beauty crafted with intention. C
       line-height: 1.02;
       letter-spacing: -0.03em;
       color: #fff;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0;
     }
 
     .luma-hero-desc {
@@ -175,8 +186,15 @@ const { title, description = "Luxury skincare & beauty crafted with intention. C
 
       .luma-hero-card {
         max-width: 520px;
+        border-radius: 20px;
+      }
+
+      .luma-hero-card-heading {
         padding: 2.5rem;
-        border-radius: 24px;
+      }
+
+      .luma-hero-card-action {
+        padding: 1.5rem 2.5rem;
       }
 
       .luma-hero-h1 {
