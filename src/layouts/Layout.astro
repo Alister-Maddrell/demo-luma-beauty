@@ -76,8 +76,7 @@ const { title, description = "Luxury skincare & beauty crafted with intention. C
       padding: 0;
       display: grid;
       grid-template-columns: 1fr 100px;
-      grid-template-rows: 1fr auto auto;
-      min-height: 75dvh;
+      grid-template-rows: auto auto auto auto auto;
       gap: 6px;
     }
 
@@ -166,7 +165,7 @@ const { title, description = "Luxury skincare & beauty crafted with intention. C
       margin: 0;
     }
 
-    /* CTA cells — two columns */
+    /* CTA + Rating row */
     .bento-cta-primary {
       display: flex;
       align-items: center;
@@ -189,7 +188,36 @@ const { title, description = "Luxury skincare & beauty crafted with intention. C
       transform: scale(1.02);
     }
 
+    .bento-rating {
+      background: rgba(17, 17, 16, 0.5);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.2rem;
+      padding: 0.75rem;
+    }
+
+    .bento-stars {
+      font-size: 0.7rem;
+      color: var(--color-luma-copper-light);
+      letter-spacing: 2px;
+    }
+
+    .bento-rating-text {
+      font-family: var(--font-body);
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.5);
+      letter-spacing: 0.05em;
+    }
+
+    /* Philosophy link — full width */
     .bento-cta-secondary {
+      grid-column: 1 / -1;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -205,13 +233,40 @@ const { title, description = "Luxury skincare & beauty crafted with intention. C
       letter-spacing: 0.12em;
       text-transform: uppercase;
       text-decoration: none;
-      padding: 1rem;
+      padding: 0.875rem;
       transition: all 0.3s;
     }
 
     .bento-cta-secondary:hover {
       background: rgba(255, 255, 255, 0.1);
       color: #fff;
+    }
+
+    /* Trust badges — bottom row */
+    .bento-trust {
+      background: rgba(17, 17, 16, 0.35);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 0.875rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .bento-trust svg {
+      flex-shrink: 0;
+      stroke: var(--color-luma-copper-light);
+    }
+
+    .bento-trust span {
+      font-family: var(--font-body);
+      font-size: 0.55rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      line-height: 1.4;
     }
 
     /* ── Desktop bento ── */
