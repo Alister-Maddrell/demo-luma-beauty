@@ -19,41 +19,38 @@ const categories = [
 ---
 
 <Layout title="LUMA — Luxury Beauty & Skincare">
-  <!-- HERO -->
+  <!-- HERO — Bento grid -->
   <section class="luma-hero">
     <div class="luma-hero-bg">
-      <img
-        src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1800&h=1200&fit=crop&q=85&crop=faces"
-        alt="Woman with luminous skin"
-        loading="eager"
-      />
+      <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1800&h=1200&fit=crop&q=85&crop=faces" alt="" loading="eager" />
     </div>
     <div class="luma-hero-overlay"></div>
 
-    <div class="luma-hero-content">
-      <!-- Heading card — the editorial moment -->
-      <div class="luma-hero-card luma-hero-card-heading animate-fade-up">
-        <p class="luma-hero-overline">Luxury Skincare & Beauty</p>
-        <h1 class="luma-hero-h1">
-          Redefine<br>Your Ritual
-        </h1>
+    <div class="luma-bento">
+      <!-- Row 1: Heading + Product image -->
+      <div class="bento-cell bento-heading animate-fade-up">
+        <p class="bento-overline">Luxury Skincare</p>
+        <h1 class="bento-h1">Redefine<br>Your<br>Ritual</h1>
+      </div>
+      <div class="bento-cell bento-image animate-fade-up delay-100">
+        <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=400&h=500&fit=crop&q=80" alt="LUMA Radiance Serum" loading="eager" />
+        <span class="bento-image-tag">Bestseller</span>
       </div>
 
-      <!-- Action card — description + CTAs -->
-      <div class="luma-hero-card luma-hero-card-action animate-fade-up delay-100">
-        <p class="luma-hero-desc">
-          Clean formulas, elevated experience, radiant results. Crafted with intention.
-        </p>
-        <div class="luma-hero-ctas">
-          <a href="/shop" class="btn-shine luma-hero-btn-primary">
-            Shop Now
-          </a>
-          <a href="/about" class="luma-hero-btn-secondary">
-            Our Philosophy
-            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
-          </a>
-        </div>
+      <!-- Row 2: Description strip -->
+      <div class="bento-cell bento-desc animate-fade-up delay-100">
+        <p>Clean formulas, elevated experience, radiant results.</p>
       </div>
+
+      <!-- Row 3: CTAs -->
+      <a href="/shop" class="bento-cell bento-cta-primary animate-fade-up delay-200">
+        <span>Shop Now</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7 7 7-7 7"/></svg>
+      </a>
+      <a href="/about" class="bento-cell bento-cta-secondary animate-fade-up delay-200">
+        <span>Our Philosophy</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7 7 7-7 7"/></svg>
+      </a>
     </div>
   </section>
 

@@ -34,7 +34,7 @@ const { title, description = "Luxury skincare & beauty crafted with intention. C
     }
 
     /* ============================================
-       LUMA HERO — Frosted glass container
+       LUMA HERO — Bento grid
        ============================================ */
     .luma-hero {
       position: relative;
@@ -60,154 +60,188 @@ const { title, description = "Luxury skincare & beauty crafted with intention. C
       position: absolute;
       inset: 0;
       background: linear-gradient(180deg,
-        rgba(17, 17, 16, 0.65) 0%,
-        rgba(17, 17, 16, 0.4) 40%,
-        rgba(17, 17, 16, 0.3) 70%,
-        rgba(17, 17, 16, 0.6) 100%);
+        rgba(17, 17, 16, 0.6) 0%,
+        rgba(17, 17, 16, 0.45) 40%,
+        rgba(17, 17, 16, 0.35) 70%,
+        rgba(17, 17, 16, 0.65) 100%);
     }
 
-    .luma-hero-content {
+    /* ── Bento grid ── */
+    .luma-bento {
       position: relative;
       z-index: 10;
       width: 100%;
-      padding: 0 1.25rem;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: 1fr 120px;
+      grid-template-rows: auto auto auto;
+      gap: 6px;
+    }
+
+    .bento-cell {
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    /* Heading cell — spans left column */
+    .bento-heading {
+      background: rgba(17, 17, 16, 0.5);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      padding: 1.25rem;
       display: flex;
       flex-direction: column;
-      gap: 0.6rem;
+      justify-content: flex-end;
     }
 
-    .luma-hero-card {
-      background: rgba(17, 17, 16, 0.45);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 16px;
-      padding: 1.5rem;
-    }
-
-    .luma-hero-card-heading {
-      padding: 1.5rem 1.5rem 1.75rem;
-    }
-
-    .luma-hero-card-action {
-      padding: 1.25rem 1.5rem;
-    }
-
-    .luma-hero-overline {
+    .bento-overline {
       font-family: var(--font-body);
-      font-size: 0.65rem;
+      font-size: 0.6rem;
       font-weight: 600;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--color-luma-copper-light);
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.5rem;
     }
 
-    .luma-hero-h1 {
-      font-family: var(--font-display);
-      font-size: clamp(2.5rem, 8vw, 4.5rem);
-      font-weight: 300;
-      font-style: normal;
-      line-height: 1.02;
-      letter-spacing: -0.03em;
-      color: #fff;
-      margin-bottom: 0;
+    .bento-h1 {
+      font-family: var(--font-display) !important;
+      font-size: 2rem !important;
+      font-weight: 300 !important;
+      line-height: 1.05 !important;
+      letter-spacing: -0.02em !important;
+      color: #fff !important;
+      text-transform: none !important;
+      margin: 0 !important;
     }
 
-    .luma-hero-desc {
+    /* Product image cell — right square */
+    .bento-image {
+      position: relative;
+      background: var(--color-luma-cream);
+      aspect-ratio: 1;
+    }
+
+    .bento-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .bento-image-tag {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
       font-family: var(--font-body);
-      font-size: 0.875rem;
+      font-size: 0.55rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-luma-black);
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+
+    /* Description strip — full width */
+    .bento-desc {
+      grid-column: 1 / -1;
+      background: rgba(17, 17, 16, 0.4);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 0.875rem 1.25rem;
+    }
+
+    .bento-desc p {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
       color: rgba(255, 255, 255, 0.65);
-      line-height: 1.55;
-      max-width: 360px;
-      margin-bottom: 1.25rem;
+      line-height: 1.5;
+      margin: 0;
     }
 
-    .luma-hero-ctas {
+    /* CTA cells — two columns */
+    .bento-cta-primary {
       display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .luma-hero-btn-primary {
-      display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 0.875rem 2rem !important;
+      gap: 0.5rem;
       background: #fff !important;
       color: var(--color-luma-black) !important;
       font-family: var(--font-body);
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.18em;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
       text-decoration: none;
+      padding: 1rem;
       transition: all 0.3s;
-      width: 100%;
-      box-sizing: border-box;
-      max-width: 100%;
     }
 
-    .luma-hero-btn-primary:hover {
-      background: var(--color-luma-cream);
-      transform: translateY(-1px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    .bento-cta-primary:hover {
+      background: var(--color-luma-cream) !important;
+      transform: scale(1.02);
     }
 
-    .luma-hero-btn-secondary {
-      display: inline-flex;
+    .bento-cta-secondary {
+      display: flex;
       align-items: center;
-      gap: 0.4rem;
+      justify-content: center;
+      gap: 0.35rem;
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.7);
       font-family: var(--font-body);
-      font-size: 0.7rem;
+      font-size: 0.6rem;
       font-weight: 600;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.6);
       text-decoration: none;
-      transition: color 0.3s;
+      padding: 1rem;
+      transition: all 0.3s;
     }
 
-    .luma-hero-btn-secondary:hover {
+    .bento-cta-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
       color: #fff;
     }
 
-    /* Desktop hero */
+    /* ── Desktop bento ── */
     @media (min-width: 768px) {
-      .luma-hero {
-        align-items: center;
+      .luma-bento {
+        max-width: 700px;
+        padding: 0 2.5rem;
+        grid-template-columns: 1fr 180px;
+        gap: 8px;
       }
 
-      .luma-hero-content {
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 6rem 2.5rem 4rem;
+      .bento-heading {
+        padding: 2rem;
       }
 
-      .luma-hero-card {
-        max-width: 520px;
-        border-radius: 20px;
+      .bento-h1 {
+        font-size: 2.8rem !important;
       }
 
-      .luma-hero-card-heading {
-        padding: 2.5rem;
+      .bento-desc {
+        padding: 1rem 1.5rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .luma-bento {
+        max-width: 800px;
+        grid-template-columns: 1fr 220px;
+        gap: 10px;
       }
 
-      .luma-hero-card-action {
-        padding: 1.5rem 2.5rem;
-      }
-
-      .luma-hero-h1 {
-        font-size: clamp(3rem, 5vw, 5rem);
-      }
-
-      .luma-hero-ctas {
-        flex-direction: row;
-        align-items: center;
-      }
-
-      .luma-hero-btn-primary {
-        width: auto;
+      .bento-h1 {
+        font-size: 3.2rem !important;
       }
     }
 
