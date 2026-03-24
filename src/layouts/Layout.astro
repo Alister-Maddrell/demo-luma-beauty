@@ -22,6 +22,17 @@ const { title, description = "Luxury skincare & beauty crafted with intention. C
     @import '../styles/global.css';
   </style>
   <style is:global>
+    /* Prevent horizontal overflow from off-screen mobile nav */
+    html, body {
+      overflow-x: hidden;
+    }
+    #mobile-nav:not(.is-open) {
+      visibility: hidden;
+    }
+    #mobile-nav.is-open {
+      visibility: visible;
+    }
+
     /* ============================================
        MOBILE LAYOUT OPTIMISATIONS
        ============================================ */
@@ -360,12 +371,19 @@ const { title, description = "Luxury skincare & beauty crafted with intention. C
     let isOpen = false;
     toggle.addEventListener('click', () => {
       isOpen = !isOpen;
+      if (isOpen) mobileNav.classList.add('is-open');
       mobileNav.style.transform = isOpen ? 'translateX(0)' : 'translateX(100%)';
       document.body.style.overflow = isOpen ? 'hidden' : '';
       toggle.setAttribute('aria-expanded', isOpen);
       line1.style.transform = isOpen ? 'rotate(45deg) translate(3px, 3px)' : '';
       line2.style.opacity = isOpen ? '0' : '1';
       line3.style.transform = isOpen ? 'rotate(-45deg) translate(3px, -3px)' : '';
+      if (!isOpen) {
+        // Remove is-open after transition ends so visibility hides the element
+        mobileNav.addEventListener('transitionend', () => {
+          if (!isOpen) mobileNav.classList.remove('is-open');
+        }, { once: true });
+      }
     });
 
     // Scroll reveal
