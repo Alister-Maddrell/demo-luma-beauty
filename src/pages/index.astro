@@ -27,46 +27,43 @@ const categories = [
     <div class="luma-hero-overlay"></div>
 
     <div class="luma-bento">
-      <!-- Row 1: Heading + Product image -->
+      <!-- Row 1: Heading + Product image (equal columns) -->
       <div class="bento-cell bento-heading animate-fade-up">
         <p class="bento-overline">Luxury Skincare</p>
-        <h1 class="bento-h1">Redefine<br>Your<br>Ritual</h1>
+        <h1 class="bento-h1">Redefine<br>Your Ritual</h1>
+        <p class="bento-tagline">Clean formulas. Elevated experience.</p>
       </div>
       <div class="bento-cell bento-image animate-fade-up delay-100">
-        <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=400&h=500&fit=crop&q=80" alt="LUMA Radiance Serum" loading="eager" />
+        <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=400&h=600&fit=crop&q=80" alt="LUMA Radiance Serum" loading="eager" />
         <span class="bento-image-tag">Bestseller</span>
       </div>
 
-      <!-- Row 2: Description -->
-      <div class="bento-cell bento-desc animate-fade-up delay-100">
-        <p>Clean formulas, elevated experience, radiant results. Crafted with intention.</p>
-      </div>
-
-      <!-- Row 3: CTA + Rating -->
+      <!-- Row 2: CTA + Rating (equal columns) -->
       <a href="/shop" class="bento-cell bento-cta-primary animate-fade-up delay-200">
         <span>Shop Now</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7 7 7-7 7"/></svg>
       </a>
       <div class="bento-cell bento-rating animate-fade-up delay-200">
         <div class="bento-stars">★★★★★</div>
-        <span class="bento-rating-text">4.9 / 5</span>
+        <span class="bento-rating-text">4.9 rating</span>
+        <span class="bento-rating-sub">200+ reviews</span>
       </div>
 
-      <!-- Row 4: Philosophy link -->
-      <a href="/about" class="bento-cell bento-cta-secondary animate-fade-up delay-300">
+      <!-- Row 3: Trust badges (equal columns) -->
+      <div class="bento-cell bento-trust animate-fade-up delay-300">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14"/><path d="M12 5v14"/><circle cx="12" cy="12" r="10"/></svg>
+        <span>Free Shipping Over $75</span>
+      </div>
+      <div class="bento-cell bento-trust animate-fade-up delay-300">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>Clean & Cruelty Free</span>
+      </div>
+
+      <!-- Row 4: Philosophy link (full width) -->
+      <a href="/about" class="bento-cell bento-philosophy animate-fade-up delay-300">
         <span>Our Philosophy</span>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7 7 7-7 7"/></svg>
       </a>
-
-      <!-- Row 5: Trust badges -->
-      <div class="bento-cell bento-trust animate-fade-up delay-300">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <span>Free Shipping<br>Over $75</span>
-      </div>
-      <div class="bento-cell bento-trust animate-fade-up delay-300">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <span>Clean &<br>Cruelty Free</span>
-      </div>
     </div>
   </section>
 
